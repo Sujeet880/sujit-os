@@ -1,0 +1,31 @@
+.featured-work {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.featured-work__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+@media (max-width: 1024px) {
+  .featured-work {
+    gap: 3.5rem;
+  }
+
+  .featured-work__grid {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .featured-work {
+    gap: 3rem;
+  }
+
+  .featured-work__grid {
+    gap: 1.5rem;
+  }
+}

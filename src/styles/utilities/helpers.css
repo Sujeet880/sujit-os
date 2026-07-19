@@ -1,0 +1,221 @@
+/* ==========================================================================
+   VISIBILITY
+   ========================================================================== */
+
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+/* Screen Reader Only */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+}
+
+/* ==========================================================================
+   POINTER EVENTS
+   ========================================================================== */
+
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.pointer-events-auto {
+  pointer-events: auto;
+}
+
+/* ==========================================================================
+   USER SELECT
+   ========================================================================== */
+
+.select-none {
+  user-select: none;
+}
+
+.select-text {
+  user-select: text;
+}
+
+.select-all {
+  user-select: all;
+}
+
+.select-auto {
+  user-select: auto;
+}
+
+/* ==========================================================================
+   OVERFLOW
+   ========================================================================== */
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-scroll {
+  overflow: scroll;
+}
+
+.overflow-visible {
+  overflow: visible;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+/* ==========================================================================
+   CURSOR
+   ========================================================================== */
+
+.cursor-default {
+  cursor: default;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
+
+.cursor-wait {
+  cursor: wait;
+}
+
+.cursor-grab {
+  cursor: grab;
+}
+
+.cursor-grabbing {
+  cursor: grabbing;
+}
+
+/* ==========================================================================
+   OBJECT FIT
+   ========================================================================== */
+
+.object-cover {
+  object-fit: cover;
+}
+
+.object-contain {
+  object-fit: contain;
+}
+
+.object-fill {
+  object-fit: fill;
+}
+
+.object-none {
+  object-fit: none;
+}
+
+.object-scale-down {
+  object-fit: scale-down;
+}
+
+/* ==========================================================================
+   OBJECT POSITION
+   ========================================================================== */
+
+.object-center {
+  object-position: center;
+}
+
+.object-top {
+  object-position: top;
+}
+
+.object-bottom {
+  object-position: bottom;
+}
+
+.object-left {
+  object-position: left;
+}
+
+.object-right {
+  object-position: right;
+}
+
+/* ==========================================================================
+   ASPECT RATIO
+   ========================================================================== */
+
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-auto {
+  aspect-ratio: auto;
+}
+
+/* ==========================================================================
+   ISOLATION
+   ========================================================================== */
+
+.isolate {
+  isolation: isolate;
+}
+
+.isolation-auto {
+  isolation: auto;
+}
+
+/* ==========================================================================
+   RESIZE
+   ========================================================================== */
+
+.resize {
+  resize: both;
+}
+
+.resize-x {
+  resize: horizontal;
+}
+
+.resize-y {
+  resize: vertical;
+}
+
+.resize-none {
+  resize: none;
+}
+
+/* ==========================================================================
+   IMAGE RENDERING
+   ========================================================================== */
+
+.crisp {
+  image-rendering: crisp-edges;
+}
+
+.pixelated {
+  image-rendering: pixelated;
+}

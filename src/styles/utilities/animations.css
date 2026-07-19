@@ -1,0 +1,180 @@
+/* ==========================================================================
+   KEYFRAMES
+   ========================================================================== */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(-1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scale-out {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-25%);
+  }
+}
+
+/* ==========================================================================
+   ANIMATION UTILITIES
+   ========================================================================== */
+
+.animate-fade-in {
+  animation: fade-in var(--duration-normal) var(--ease-standard) both;
+}
+
+.animate-fade-out {
+  animation: fade-out var(--duration-normal) var(--ease-standard) both;
+}
+
+.animate-slide-up {
+  animation: slide-up var(--duration-normal) var(--ease-standard) both;
+}
+
+.animate-slide-down {
+  animation: slide-down var(--duration-normal) var(--ease-standard) both;
+}
+
+.animate-slide-left {
+  animation: slide-left var(--duration-normal) var(--ease-standard) both;
+}
+
+.animate-slide-right {
+  animation: slide-right var(--duration-normal) var(--ease-standard) both;
+}
+
+.animate-scale-in {
+  animation: scale-in var(--duration-fast) var(--ease-standard) both;
+}
+
+.animate-scale-out {
+  animation: scale-out var(--duration-fast) var(--ease-standard) both;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-bounce {
+  animation: bounce 1s ease infinite;
+}
+
+.animate-none {
+  animation: none;
+}
+
+/* ==========================================================================
+   ACCESSIBILITY
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  [class*="animate-"] {
+    animation: none !important;
+  }
+}

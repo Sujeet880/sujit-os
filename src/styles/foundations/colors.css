@@ -1,0 +1,54 @@
+:root {
+  /* ================================
+     Neutral (Zinc)
+  ================================= */
+
+  --color-zinc-0: #ffffff;
+  --color-zinc-50: #fafafa;
+  --color-zinc-100: #f4f4f5;
+  --color-zinc-200: #e4e4e7;
+  --color-zinc-300: #d4d4d8;
+  --color-zinc-400: #a1a1aa;
+  --color-zinc-500: #71717a;
+  --color-zinc-600: #52525b;
+  --color-zinc-700: #3f3f46;
+  --color-zinc-800: #27272a;
+  --color-zinc-900: #18181b;
+  --color-zinc-950: #09090b;
+
+  /* ================================
+     Blue
+  ================================= */
+
+  --color-blue-50: #eff6ff;
+  --color-blue-100: #dbeafe;
+  --color-blue-200: #bfdbfe;
+  --color-blue-300: #93c5fd;
+  --color-blue-400: #60a5fa;
+  --color-blue-500: #3b82f6;
+  --color-blue-600: #2563eb;
+  --color-blue-700: #1d4ed8;
+  --color-blue-800: #1e40af;
+  --color-blue-900: #1e3a8a;
+
+  /* ================================
+     Green
+  ================================= */
+
+  --color-green-500: #22c55e;
+  --color-green-600: #16a34a;
+
+  /* ================================
+     Yellow
+  ================================= */
+
+  --color-yellow-500: #eab308;
+  --color-yellow-600: #ca8a04;
+
+  /* ================================
+     Red
+  ================================= */
+
+  --color-red-500: #ef4444;
+  --color-red-600: #dc2626;
+}

@@ -1,0 +1,11 @@
+.professional-journey {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.professional-journey__timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}

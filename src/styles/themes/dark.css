@@ -1,0 +1,92 @@
+/* ==========================================
+   Dark Theme
+========================================== */
+
+[data-theme="dark"] {
+
+  /* ==========================================
+     Surface
+  ========================================== */
+
+  --background: var(--color-zinc-950);
+
+  --surface: var(--color-zinc-900);
+
+  --surface-secondary: var(--color-zinc-800);
+
+  --surface-tertiary: var(--color-zinc-700);
+
+  /* ==========================================
+     Text
+  ========================================== */
+
+  --foreground: var(--color-zinc-50);
+
+  --foreground-muted: var(--color-zinc-400);
+
+  --foreground-subtle: var(--color-zinc-500);
+
+  --foreground-disabled: var(--color-zinc-600);
+
+  /* ==========================================
+     Border
+  ========================================== */
+
+  --border: var(--color-zinc-800);
+
+  --border-strong: var(--color-zinc-700);
+
+  /* ==========================================
+     Brand
+  ========================================== */
+
+  --primary: var(--color-blue-500);
+
+  --primary-hover: var(--color-blue-400);
+
+  --primary-foreground: var(--color-zinc-950);
+
+  /* ==========================================
+     Status
+  ========================================== */
+
+  --success: var(--color-green-500);
+
+  --warning: var(--color-yellow-500);
+
+  --error: var(--color-red-500);
+
+  /* ==========================================
+     Shadows
+  ========================================== */
+
+  --shadow-elevation-1:
+    0 2px 8px rgb(0 0 0 / 0.30);
+
+  --shadow-elevation-2:
+    0 8px 24px rgb(0 0 0 / 0.40);
+
+  --shadow-elevation-3:
+    0 20px 48px rgb(0 0 0 / 0.50);
+
+  /* ==========================================
+     Focus
+  ========================================== */
+
+  --focus-ring:
+    0 0 0 3px rgb(59 130 246 / 0.45);
+
+  /* ==========================================
+     Selection
+  ========================================== */
+
+  --selection-background: var(--color-blue-800);
+
+  --selection-foreground: var(--color-zinc-50);
+
+  /* ==========================================
+     Overlay
+  ========================================== */
+
+  --overlay: rgb(0 0 0 / 0.65);
+}

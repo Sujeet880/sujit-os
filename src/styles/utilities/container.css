@@ -1,0 +1,51 @@
+/* ==========================================================================
+   BASE CONTAINER
+   ========================================================================== */
+
+.container,
+.container-sm,
+.container-lg,
+.container-xl,
+.container-fluid,
+.container-full {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: var(--container-padding-inline);
+}
+
+/* ==========================================================================
+   CONTAINER SIZES
+   ========================================================================== */
+
+.container-sm {
+  max-width: var(--container-sm);
+}
+
+.container {
+  max-width: var(--container-md);
+}
+
+.container-lg {
+  max-width: var(--container-lg);
+}
+
+.container-xl {
+  max-width: var(--container-xl);
+}
+
+/* ==========================================================================
+   FLUID
+   ========================================================================== */
+
+.container-fluid {
+  max-width: none;
+}
+
+/* ==========================================================================
+   FULL WIDTH
+   ========================================================================== */
+
+.container-full {
+  max-width: 100%;
+  padding-inline: 0;
+}

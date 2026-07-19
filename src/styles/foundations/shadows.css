@@ -1,0 +1,42 @@
+:root {
+  /* ==========================================
+     Primitive Shadow Scale
+  ========================================== */
+
+  --shadow-none: none;
+
+  --shadow-xs:
+    0 1px 2px rgb(0 0 0 / 0.04);
+
+  --shadow-sm:
+    0 2px 4px rgb(0 0 0 / 0.06),
+    0 1px 2px rgb(0 0 0 / 0.04);
+
+  --shadow-md:
+    0 6px 12px rgb(0 0 0 / 0.08),
+    0 2px 4px rgb(0 0 0 / 0.05);
+
+  --shadow-lg:
+    0 12px 24px rgb(0 0 0 / 0.10),
+    0 6px 12px rgb(0 0 0 / 0.06);
+
+  --shadow-xl:
+    0 24px 48px rgb(0 0 0 / 0.14),
+    0 12px 24px rgb(0 0 0 / 0.08);
+
+  /* ==========================================
+     Semantic Shadow Tokens
+  ========================================== */
+
+  --shadow-card: var(--shadow-sm);
+
+  --shadow-card-hover: var(--shadow-md);
+
+  --shadow-dropdown: var(--shadow-lg);
+
+  --shadow-modal: var(--shadow-xl);
+
+  --shadow-tooltip: var(--shadow-sm);
+
+  --shadow-focus: 0 0 0 3px rgb(59 130 246 / 0.35);
+}

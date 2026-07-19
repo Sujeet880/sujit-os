@@ -1,0 +1,50 @@
+:root {
+
+  /* Primitive */
+
+  --space-0:
+  --space-1:
+  ...
+
+  /* Layout */
+
+  --container-padding:
+
+  --content-gap:
+
+  --grid-gap:
+
+  --stack-gap:
+
+  /* Components */
+
+  --card-padding:
+
+  --button-padding-x:
+
+  --button-padding-y:
+
+  --input-padding-x:
+
+  --input-padding-y:
+
+  /* Sections */
+
+  --section-padding-x:
+
+  --section-padding-y:
+
+  --section-gap:
+}
+
+/* Tablet */
+
+@media (min-width: 768px) {
+
+}
+
+/* Desktop */
+
+@media (min-width: 1280px) {
+
+}

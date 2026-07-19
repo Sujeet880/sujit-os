@@ -1,26 +1,75 @@
 @import "tailwindcss";
 
+/* ==========================================================================
+   DESIGN TOKENS
+   ========================================================================== */
+
 :root {
+  color-scheme: light;
+
+  /* Colors */
   --background: #ffffff;
-  --foreground: #171717;
+  --surface: #fafafa;
+  --foreground: #111111;
+  --foreground-muted: #666666;
+  --border: #e5e7eb;
+  --primary: #2563eb;
+
+  /* Typography */
+  --font-bold: 700;
+
+  --text-body-lg: 1.125rem;
+
+  /* Spacing */
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--primary);
+  color: #ffffff;
 }

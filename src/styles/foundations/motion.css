@@ -1,0 +1,59 @@
+:root {
+  /* ==========================================
+     Duration
+  ========================================== */
+
+  --duration-instant: 0ms;
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+  --duration-slower: 600ms;
+
+  /* ==========================================
+     Easing
+  ========================================== */
+
+  --ease-linear: linear;
+
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+
+  --ease-emphasized: cubic-bezier(0.2, 0, 0, 1.2);
+
+  --ease-decelerate: cubic-bezier(0, 0, 0, 1);
+
+  --ease-accelerate: cubic-bezier(0.3, 0, 1, 1);
+
+  /* ==========================================
+     Semantic Motion Tokens
+  ========================================== */
+
+  --transition-color:
+    color var(--duration-fast) var(--ease-standard),
+    background-color var(--duration-fast) var(--ease-standard),
+    border-color var(--duration-fast) var(--ease-standard);
+
+  --transition-opacity:
+    opacity var(--duration-normal) var(--ease-standard);
+
+  --transition-transform:
+    transform var(--duration-normal) var(--ease-standard);
+
+  --transition-shadow:
+    box-shadow var(--duration-normal) var(--ease-standard);
+
+  --transition-all:
+    all var(--duration-normal) var(--ease-standard);
+
+  /* ==========================================
+     Hover Scale
+  ========================================== */
+
+  --scale-hover: 1.02;
+  --scale-active: 0.98;
+
+  /* ==========================================
+     Focus
+  ========================================== */
+
+  --focus-ring-duration: var(--duration-fast);
+}

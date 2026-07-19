@@ -1,0 +1,45 @@
+.contact-cta {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-cta__card {
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 4rem;
+  text-align: center;
+}
+
+.contact-cta__content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-cta__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.contact-cta__description {
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.contact-cta__actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@media (max-width:768px){
+
+.contact-cta__card{
+padding:2rem;
+}
+
+.contact-cta__actions{
+flex-direction:column;
+}
+
+}

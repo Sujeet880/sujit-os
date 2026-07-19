@@ -1,0 +1,43 @@
+/* ==========================================================================
+   SECTION
+   ========================================================================== */
+
+.section {
+  width: 100%;
+}
+
+/* ==========================================================================
+   VARIANTS
+   ========================================================================== */
+
+.section--default {
+  background: var(--background);
+}
+
+.section--muted {
+  background: var(--surface-secondary);
+}
+
+.section--transparent {
+  background: transparent;
+}
+
+/* ==========================================================================
+   SPACING
+   ========================================================================== */
+
+.section--sm {
+  padding-block: var(--space-12);
+}
+
+.section--md {
+  padding-block: var(--space-16);
+}
+
+.section--lg {
+  padding-block: var(--space-24);
+}
+
+.section--xl {
+  padding-block: var(--space-32);
+}
