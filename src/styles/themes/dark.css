@@ -40,9 +40,9 @@
      Brand
   ========================================== */
 
-  --primary: var(--color-blue-500);
+  --primary: #FC8019;
 
-  --primary-hover: var(--color-blue-400);
+  --primary-hover: #ff9847;
 
   --primary-foreground: var(--color-zinc-950);
 
@@ -74,13 +74,13 @@
   ========================================== */
 
   --focus-ring:
-    0 0 0 3px rgb(59 130 246 / 0.45);
+    0 0 0 3px rgb(252 128 25 / 0.45);
 
   /* ==========================================
      Selection
   ========================================== */
 
-  --selection-background: var(--color-blue-800);
+  --selection-background: rgba(252, 128, 25, 0.3);
 
   --selection-foreground: var(--color-zinc-50);
 

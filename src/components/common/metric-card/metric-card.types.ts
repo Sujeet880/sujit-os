@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-export interface MetricCardProps {
+export interface MetricCardProps extends React.HTMLAttributes<HTMLDivElement> {
   /**
    * Primary metric value.
    * Example: ₹7Cr+, 5M+, 50+
@@ -22,9 +22,4 @@ export interface MetricCardProps {
    * Optional icon.
    */
   icon?: ReactNode;
-
-  /**
-   * Additional custom classes.
-   */
-  className?: string;
 }

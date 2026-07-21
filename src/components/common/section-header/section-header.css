@@ -12,6 +12,16 @@
 
 .section-header__badge {
   width: fit-content;
+  background: transparent !important;
+  color: #fc8019 !important; /* Orange accent */
+  border: none !important;
+  font-size: 0.75rem !important; /* Small label size */
+  font-weight: 700 !important;
+  text-transform: uppercase !important; /* Uppercase accent */
+  letter-spacing: 0.12em !important;
+  padding: 0 !important;
+  min-height: auto !important;
+  box-shadow: none !important;
 }
 
 .section-header__title {
@@ -27,12 +37,10 @@
 
 .section-header__description {
   margin: 0;
-
-  max-width: 38rem;
-
+  margin-top: 8px; /* 12px gap + 8px margin-top = exactly 20px space */
+  max-width: 640px; /* 640-680px readable content width */
   font-size: 1.125rem;
   line-height: 1.7;
-
   color: var(--muted-foreground);
 }
 

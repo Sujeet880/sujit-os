@@ -1,70 +1,58 @@
-export const featuredProjects = [
+export interface Project {
+  category: string;
+  title: string;
+  description: string;
+  role: string;
+  timeline: string;
+  businessImpact: string[];
+  tags: string[];
+  image: string;
+  href: string;
+}
+
+export const featuredProjects: Project[] = [
   {
-    category: "Enterprise SaaS",
-
-    year: "2025",
-
-    title: "Hotel Management Platform",
-
-    description:
-      "Redesigned an enterprise platform that streamlined hotel operations and improved booking workflows.",
-
-    metrics: [
-      "5M+ Users",
-      "₹7Cr Impact",
-      "42% Faster Tasks",
+    category: "MIRARI SURFACE",
+    title: "Smart Switchboard",
+    description: "Led the end-to-end product design of an enterprise dashboard platform that simplified complex workflows, improved operational visibility and enabled faster decision-making through scalable product experiences.",
+    role: "Senior Product Designer",
+    timeline: "2025 – Present",
+    businessImpact: [
+      "Simplified complex enterprise workflows.",
+      "Improved operational visibility across teams.",
+      "Designed scalable dashboard experiences for business users."
     ],
-
     tags: [
-      "UX Research",
-      "Design System",
-      "Dashboard",
-    ],
-  },
-
-  {
-    category: "FinTech",
-
-    year: "2024",
-
-    title: "Digital Banking Experience",
-
-    description:
-      "Improved onboarding and transaction experience through user-centered product design.",
-
-    metrics: [
-      "2M+ Users",
-      "30% Conversion",
-      "15 Countries",
-    ],
-
-    tags: [
-      "Product Design",
-      "Accessibility",
-      "Mobile",
-    ],
-  },
-
-  {
-    category: "Healthcare",
-
-    year: "2023",
-
-    title: "Doctor Consultation Platform",
-
-    description:
-      "Designed a scalable healthcare platform focused on appointment booking and patient engagement.",
-
-    metrics: [
-      "800K Users",
-      "4.8★ Rating",
-      "50+ Clinics",
-    ],
-
-    tags: [
+      "Enterprise SaaS",
+      "Dashboard Design",
+      "Workflow Design",
       "Research",
-      "UI Design",
       "Design System",
+      "Cross-functional Collaboration"
     ],
+    image: "/hotel_platform.png",
+    href: "/case-studies/mirari-surface-dashboard"
   },
+  {
+    category: "ENTERPRISE LOYALTY PLATFORM",
+    title: "Scaling a White-label Loyalty Platform",
+    description: "Helped evolve a white-label enterprise loyalty platform serving 50+ brands and more than 5 million channel partners. Focused on scalable product experiences, reusable design systems and enterprise workflows across both the dashboard and mobile application.",
+    role: "Product Designer",
+    timeline: "2023 – 2025",
+    businessImpact: [
+      "Supported 50+ enterprise brands.",
+      "Helped scale experiences for 5M+ channel partners.",
+      "Contributed to reusable product systems that accelerated enterprise implementations."
+    ],
+    tags: [
+      "Enterprise SaaS",
+      "White-label Platform",
+      "Dashboard",
+      "Mobile Experience",
+      "Design System",
+      "Enterprise UX"
+    ],
+    image: "/digital_banking.png",
+    href: "/case-studies/scaling-white-label-loyalty-platform"
+  }
 ];

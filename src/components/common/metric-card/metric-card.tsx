@@ -11,9 +11,10 @@ export function MetricCard({
   description,
   icon,
   className,
+  ...props
 }: MetricCardProps) {
   return (
-    <Card className={cn("metric-card", className)}>
+    <Card className={cn("metric-card", className)} {...props}>
       {icon && (
         <div className="metric-card__icon">
           {icon}

@@ -8,12 +8,12 @@
   color-scheme: light;
 
   /* Colors */
-  --background: #ffffff;
+  --background: #fcfcfa;
   --surface: #fafafa;
   --foreground: #111111;
   --foreground-muted: #666666;
   --border: #e5e7eb;
-  --primary: #2563eb;
+  --primary: #FC8019;
 
   /* Typography */
   --font-bold: 700;

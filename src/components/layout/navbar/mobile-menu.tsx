@@ -28,7 +28,7 @@ export function MobileMenu() {
       {open && (
         <div className="navbar__mobile-panel">
           <Link
-            href="#work"
+            href="/#work"
             className={
               activeSection === "work"
                 ? "navbar__link navbar__link--active"
@@ -40,7 +40,7 @@ export function MobileMenu() {
           </Link>
 
           <Link
-            href="#about"
+            href="/#about"
             className={
               activeSection === "about"
                 ? "navbar__link navbar__link--active"
@@ -52,7 +52,7 @@ export function MobileMenu() {
           </Link>
 
           <Link
-            href="#articles"
+            href="/#articles"
             className={
               activeSection === "articles"
                 ? "navbar__link navbar__link--active"
@@ -60,11 +60,11 @@ export function MobileMenu() {
             }
             onClick={handleClose}
           >
-            Articles
+            Writing
           </Link>
 
           <Link
-            href="#contact"
+            href="/#contact"
             className={
               activeSection === "contact"
                 ? "navbar__link navbar__link--active"
@@ -78,17 +78,11 @@ export function MobileMenu() {
           <hr />
 
           <Link
-            href="/resume.pdf"
+            href="mailto:ktsujeet1997@gmail.com"
             onClick={handleClose}
           >
-            Resume
-          </Link>
-
-          <Link
-            href="mailto:hello@example.com"
-            onClick={handleClose}
-          >
-            Let's Talk
+            <span className="navbar__cta-dot" />
+            <span>Let's Talk</span>
           </Link>
         </div>
       )}

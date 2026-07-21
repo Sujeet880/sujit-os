@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 /**
  * ArticleCard displays a blog article preview.
  */
-export interface ArticleCardProps {
+export interface ArticleCardProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string;
 
   description: string;
@@ -16,5 +16,5 @@ export interface ArticleCardProps {
 
   href?: string;
 
-  className?: string;
+  category?: string;
 }

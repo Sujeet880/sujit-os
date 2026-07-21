@@ -38,5 +38,5 @@
 
   --shadow-tooltip: var(--shadow-sm);
 
-  --shadow-focus: 0 0 0 3px rgb(59 130 246 / 0.35);
+  --shadow-focus: 0 0 0 3px rgb(252 128 25 / 0.35);
 }

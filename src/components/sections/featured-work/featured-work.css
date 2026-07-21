@@ -1,31 +1,321 @@
 .featured-work {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
 }
 
-.featured-work__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2.5rem;
+/* Custom override for SectionHeader description inside Featured Work */
+.featured-work .section-header__description {
+  margin-top: 8px; /* Heading -> Description: 20px (12px gap + 8px margin) */
+  max-width: 640px; /* Limit description width to 640px range */
+  margin-inline: auto;
 }
+
+.featured-work__list {
+  display: flex;
+  flex-direction: column;
+  gap: 56px; /* generous visual rhythm between cards */
+  margin-top: 56px; /* Spacing between heading/description and projects list: 56px */
+}
+
+.featured-work__item {
+  position: relative;
+  display: grid;
+  align-items: center; /* equal vertical alignment */
+  gap: 3.5rem; /* columns gap */
+  padding: 44px; /* premium whitespace layout */
+  border: 1px solid rgba(17, 17, 17, 0.06); /* 1px subtle neutral border */
+  border-radius: 18px; /* 18px corner radius */
+  background: #ffffff;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.01),
+    0 8px 24px -12px rgba(0, 0, 0, 0.03); /* soft elevation */
+  transition: 
+    border-color 220ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 220ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 220ms cubic-bezier(0.16, 1, 0.3, 1); /* standard transition duration 220ms */
+}
+
+.featured-work__item:nth-child(even) {
+  background: #FFF9F4 !important; /* Very subtle warm surface */
+}
+
+.featured-work__item:hover {
+  transform: translateY(-3px) !important; /* Standard Level 3 hover lift: translateY(-3px) */
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.01),
+    0 16px 32px -12px rgba(0, 0, 0, 0.08) !important; /* shadow slightly stronger */
+  border-color: rgba(17, 17, 17, 0.12) !important; /* border slightly stronger */
+}
+
+.featured-work__item--row {
+  grid-template-columns: 1.05fr 0.95fr; /* visually balanced split columns */
+}
+
+.featured-work__item--row-reverse {
+  grid-template-columns: 0.95fr 1.05fr;
+}
+
+.featured-work__item--row-reverse .featured-work__details {
+  order: 2;
+}
+
+.featured-work__item--row-reverse .featured-work__visual {
+  order: 1;
+}
+
+/* --- Details --- */
+.featured-work__details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.featured-work__category {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #fc8019; /* Swiggy orange accent */
+  line-height: 1;
+  margin-bottom: 12px; /* spacing category -> title */
+}
+
+.featured-work__item-title {
+  font-size: 2.25rem; /* strongest element inside card */
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: #111111;
+  margin: 0;
+  margin-bottom: 16px; /* spacing title -> description */
+}
+
+.featured-work__summary {
+  font-size: 1.05rem; /* highly legible body sizing */
+  line-height: 1.6;
+  color: #4b5563;
+  margin: 0;
+  max-width: 620px; /* limit description width */
+  margin-bottom: 20px; /* spacing description -> metadata */
+}
+
+.featured-work__meta-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+.featured-work__meta-inline-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.featured-work__meta-inline-label {
+  font-weight: 600;
+  color: #374151;
+}
+
+.featured-work__meta-inline-value {
+  color: #6b7280;
+}
+
+.featured-work__meta-dot {
+  color: #d1d5db;
+}
+
+/* Business Impact separated block */
+.featured-work__impact-box {
+  width: 100%;
+  max-width: 620px;
+  background: #fbfbfa; /* subtle light canvas surface */
+  border: 1px solid rgba(17, 17, 17, 0.05);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 24px; /* spacing impact -> skills */
+}
+
+.featured-work__impact-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #374151;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.featured-work__impact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.featured-work__impact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.featured-work__impact-bullet {
+  color: #fc8019; /* orange bullet indicator */
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.featured-work__impact-point {
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: #4b5563;
+}
+
+/* Skills tag pills */
+.featured-work__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px; /* spacing skills -> CTA */
+  max-width: 620px;
+}
+
+.featured-work__tag-pill {
+  position: relative;
+  z-index: 5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px; /* consistent pill height */
+  padding-inline: 14px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #4b5563;
+  background: #f3f4f6;
+  border-radius: 999px; /* Hero button radius */
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: all 220ms ease;
+  cursor: default;
+}
+
+.featured-work__tag-pill:hover {
+  background: rgba(252, 128, 25, 0.05); /* Orange hover tint */
+  border-color: rgba(252, 128, 25, 0.15);
+  color: #fc8019;
+}
+
+/* absolute positioned link overlay to make whole card clickable */
+.featured-work__cta-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+
+/* --- Visual Canvas --- */
+.featured-work__visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 12px; /* Spacing around the image container to let it breathe */
+}
+
+.featured-work__canvas {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.25;
+  border-radius: 18px; /* Radius 18px */
+  padding: 0.5rem;
+  background: #ffffff;
+  border: 1px solid rgba(17, 17, 17, 0.06); /* subtle border */
+  box-shadow: 
+    0 1px 2px rgba(0, 0, 0, 0.01),
+    0 8px 24px -12px rgba(0, 0, 0, 0.03); /* soft shadow */
+  z-index: 2;
+  overflow: hidden;
+  transition: 
+    transform 220ms cubic-bezier(0.16, 1, 0.3, 1), 
+    box-shadow 220ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.featured-work__canvas-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px; /* inner radius fit */
+  overflow: hidden;
+  background: #f9fafb;
+  border: 1px solid rgba(17, 17, 17, 0.03);
+}
+
+.featured-work__canvas-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 250ms cubic-bezier(0.16, 1, 0.3, 1); /* 250ms transition */
+}
+
+/* Entire card hover zooms the image */
+.featured-work__item:hover .featured-work__canvas-img {
+  transform: scale(1.02); /* very subtle 1.02 scale zoom */
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
 
 @media (max-width: 1024px) {
-  .featured-work {
-    gap: 3.5rem;
+  .featured-work__list {
+    gap: 36px;
   }
 
-  .featured-work__grid {
-    gap: 2rem;
+  .featured-work__item {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 32px 24px; /* reduce padding inside card on mobile */
+  }
+
+  .featured-work__list .featured-work__item--row-reverse .featured-work__details,
+  .featured-work__list .featured-work__item--row .featured-work__details {
+    order: 1;
+    align-items: center;
+    text-align: center;
+  }
+
+  .featured-work__list .featured-work__item--row-reverse .featured-work__visual,
+  .featured-work__list .featured-work__item--row .featured-work__visual {
+    order: 2;
+    margin-top: 12px;
+  }
+
+  .featured-work__summary,
+  .featured-work__meta-row,
+  .featured-work__impact-box,
+  .featured-work__tags {
+    margin-inline: auto;
+    justify-content: center;
   }
 }
 
-@media (max-width: 768px) {
-  .featured-work {
-    gap: 3rem;
+@media (max-width: 640px) {
+  .featured-work__item-title {
+    font-size: 1.75rem;
   }
 
-  .featured-work__grid {
-    gap: 1.5rem;
+  .featured-work__canvas {
+    border-radius: 18px;
+  }
+
+  .featured-work__canvas-inner {
+    border-radius: 12px;
   }
 }

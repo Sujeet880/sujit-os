@@ -23,21 +23,46 @@
 }
 
 /* ==========================================================================
-   SPACING
+   SPACING SYSTEM
    ========================================================================== */
 
+:root {
+  --section-padding-y-sm: 2rem;
+  --section-padding-y-md: 3.5rem;
+  --section-padding-y-lg: 6.5rem;
+  --section-padding-y-xl: 8rem;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --section-padding-y-sm: 1.5rem;
+    --section-padding-y-md: 2.5rem;
+    --section-padding-y-lg: 4.5rem;
+    --section-padding-y-xl: 5.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --section-padding-y-sm: 1rem;
+    --section-padding-y-md: 2rem;
+    --section-padding-y-lg: 3rem;
+    --section-padding-y-xl: 4rem;
+  }
+}
+
 .section--sm {
-  padding-block: var(--space-12);
+  padding-block: var(--section-padding-y-sm);
 }
 
 .section--md {
-  padding-block: var(--space-16);
+  padding-block: var(--section-padding-y-md);
 }
 
 .section--lg {
-  padding-block: var(--space-24);
+  padding-block: var(--section-padding-y-lg);
 }
 
 .section--xl {
-  padding-block: var(--space-32);
+  padding-block: var(--section-padding-y-xl);
 }

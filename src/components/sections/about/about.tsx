@@ -1,4 +1,7 @@
-import { forwardRef } from "react";
+"use client";
+
+import { forwardRef, useEffect } from "react";
+import { Layers, Zap, Users } from "lucide-react";
 
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
@@ -9,8 +12,73 @@ import "./about.css";
 
 import type { AboutProps } from "./about.types";
 
+const coreValues = [
+  {
+    icon: <Layers size={16} className="about__value-icon" />,
+    title: "Curiosity",
+    description: "I enjoy exploring how people think, work and interact with technology. Curiosity helps me uncover insights that often lead to better product decisions."
+  },
+  {
+    icon: <Zap size={16} className="about__value-icon" />,
+    title: "Continuous Learning",
+    description: "Technology evolves quickly, and so do I. I actively learn new tools, design methods and product strategies to stay relevant and improve my craft."
+  },
+  {
+    icon: <Users size={16} className="about__value-icon" />,
+    title: "Collaboration",
+    description: "Great products are never built alone. I value open communication, constructive feedback and working closely with cross-functional teams to achieve shared goals."
+  },
+  {
+    icon: <Layers size={16} className="about__value-icon" />,
+    title: "Attention to Detail",
+    description: "Small design decisions often create the biggest impact. From interaction states to content hierarchy, I focus on creating polished and consistent experiences."
+  },
+  {
+    icon: <Zap size={16} className="about__value-icon" />,
+    title: "Problem Solving",
+    description: "I enjoy breaking down complex business challenges into simple, intuitive experiences that users can understand with confidence."
+  },
+  {
+    icon: <Users size={16} className="about__value-icon" />,
+    title: "Growth Mindset",
+    description: "Every project teaches something new. I believe that listening, experimenting and reflecting are essential parts of becoming a better product designer."
+  }
+];
+
+const skills = [
+  "Product Thinking",
+  "UX Strategy",
+  "Design Systems",
+  "Enterprise SaaS",
+  "Research",
+  "Accessibility",
+  "Collaboration",
+  "Continuous Learning",
+  "Problem Solving",
+  "Business Impact"
+];
+
 export const About = forwardRef<HTMLElement, AboutProps>(
   ({ className, ...props }, ref) => {
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("about__value-card--in-view");
+              observer.unobserve(entry.target); // Trigger only once
+            }
+          });
+        },
+        { threshold: 0.08, rootMargin: "0px 0px -40px 0px" }
+      );
+
+      const items = document.querySelectorAll(".about__value-card");
+      items.forEach((item) => observer.observe(item));
+
+      return () => observer.disconnect();
+    }, []);
+
     return (
       <Section
         id="about"
@@ -20,51 +88,71 @@ export const About = forwardRef<HTMLElement, AboutProps>(
       >
         <Container>
           <SectionHeader
-            eyebrow="About Me"
-            title="Designing products that solve real business problems."
-            description="I combine product thinking, UX strategy and visual design to create digital experiences that users love and businesses value."
+            badge="BEYOND DESIGN"
+            title="The person behind the products."
+            description="For me, product design is about understanding people before designing interfaces. Every project is an opportunity to simplify complexity, solve meaningful problems and create experiences that make someone's work or life a little easier. I enjoy collaborating with diverse teams, asking the right questions and turning ideas into products that deliver measurable value."
+            layout="stacked"
           />
 
           <div className="about__content">
-            <div className="about__text">
-              <h3 className="about__title">
-                Product Designer with 5+ years of experience.
-              </h3>
-
-              <p className="about__description">
-                I specialize in turning complex workflows into
-                simple, intuitive experiences. My work spans
-                SaaS platforms, enterprise products, mobile
-                apps and design systems, always balancing user
-                needs with business goals.
-              </p>
-
-              <div className="about__highlights">
-                <div className="about__highlight">
-                  <strong>5+</strong>
-                  <p>Years Experience</p>
+            {/* Left Column: Portrait photo visual frame */}
+            <div className="about__image-column">
+              <div className="about__canvas">
+                <div className="about__canvas-inner">
+                  <img
+                    src="/sujit_about_new.jpg"
+                    alt="Sujit Kumar"
+                    className="about__canvas-img"
+                  />
                 </div>
-
-                <div className="about__highlight">
-                  <strong>20+</strong>
-                  <p>Products Designed</p>
-                </div>
-
-                <div className="about__highlight">
-                  <strong>5M+</strong>
-                  <p>Users Reached</p>
-                </div>
-
-                <div className="about__highlight">
-                  <strong>₹7Cr+</strong>
-                  <p>Business Impact</p>
-                </div>
+                <div className="about__canvas-blueprint" />
               </div>
             </div>
 
-            <div className="about__image">
-              <div className="about__placeholder">
-                Profile Image
+            {/* Right Column: Story & Philosophy */}
+            <div className="about__text-column">
+              <div className="about__story">
+                <h3 className="about__subtitle">Personal Story</h3>
+                <p className="about__paragraph">
+                  Outside of design, I enjoy learning about product strategy, emerging technologies and how businesses scale through great user experiences. I believe the best designers understand not only users, but also business objectives, engineering constraints and market realities.
+                </p>
+              </div>
+
+              <div className="about__philosophy">
+                <h3 className="about__subtitle">Design Philosophy</h3>
+                <p className="about__paragraph">
+                  "Great design isn't about adding more. It's about removing everything that stands between users and their goals."
+                </p>
+              </div>
+
+              <div className="about__values">
+                <h3 className="about__subtitle font-semibold">How I Work with Teams</h3>
+                <div className="about__values-grid">
+                  {coreValues.map((val, idx) => (
+                    <div 
+                      key={val.title} 
+                      className="about__value-card"
+                      style={{ transitionDelay: `${idx * 80}ms` }}
+                    >
+                      {val.icon}
+                      <div>
+                        <h4 className="about__value-title">{val.title}</h4>
+                        <p className="about__value-text">{val.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="about__skills-block">
+                <h3 className="about__subtitle">Core Skills</h3>
+                <div className="about__skills-list">
+                  {skills.map((skill) => (
+                    <span key={skill} className="about__skill-pill">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

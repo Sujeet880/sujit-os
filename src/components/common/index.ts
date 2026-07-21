@@ -5,3 +5,4 @@ export { MetricCard } from "./metric-card";
 export { ProjectCard } from "./project-card";
 export { SectionHeader } from "./section-header";
 export { TimelineItem } from "./timeline-item";
+export { SocialButtons } from "./social-buttons";

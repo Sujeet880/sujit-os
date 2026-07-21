@@ -3,14 +3,183 @@
   flex-direction: column;
 }
 
-.how-i-think__grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 2rem;
+/* Custom override for SectionHeader description inside How I Think */
+.how-i-think .section-header__description {
+  margin-top: 8px; /* Heading -> Description gap: 20px (12px gap + 8px margin) */
+  max-width: 680px; /* Maximum 680px width */
+  margin-inline: auto;
 }
 
-@media (max-width: 768px) {
-  .how-i-think__grid {
-    grid-template-columns: 1fr;
+.how-i-think__journey {
+  position: relative;
+  margin-top: 48px; /* Spacing from header: 48px */
+  width: 100%;
+}
+
+.how-i-think__flow-line {
+  display: none; /* Removed horizontal line connecting indicator */
+}
+
+.how-i-think__steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns x 2 rows */
+  gap: 24px; /* Balanced spacing */
+  padding-bottom: 0;
+  width: 100%;
+}
+
+.how-i-think__step {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff; /* Existing design system */
+  border: 1px solid rgba(17, 17, 17, 0.06); /* 1px subtle neutral border */
+  border-radius: 18px; /* Border radius 18px */
+  padding: 28px; /* Internal padding 28px */
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.01),
+    0 8px 20px -10px rgba(0, 0, 0, 0.02); /* Very soft shadow */
+  transition: 
+    border-color 220ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 220ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 220ms cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 500ms cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 2;
+  height: 100%;
+  
+  /* Visible by default for progressive enhancement and hydration safety! */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.how-i-think__step--animate-prep {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.how-i-think__step--in-view {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.how-i-think__step:hover {
+  transform: translateY(-3px) !important; /* translateY(-3px) hover lift */
+  border-color: rgba(17, 17, 17, 0.12) !important; /* Border slightly stronger */
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.01),
+    0 16px 32px -12px rgba(0, 0, 0, 0.08) !important; /* Shadow slightly increases */
+}
+
+.how-i-think__step--highlighted {
+  background: #fbfbfa !important; /* subtle light cream/surface background */
+  border-top: 2px solid #fc8019 !important; /* orange accent line to guide the eye */
+}
+
+.how-i-think__step:nth-child(even) {
+  background: #FFF9F4 !important; /* Very subtle warm surface */
+}
+
+.how-i-think__step-header {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 16px; /* spacing between icon squircle and title */
+}
+
+.how-i-think__step-node {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px; /* small modern squircle */
+  background: rgba(252, 128, 25, 0.06); /* subtle orange accent background */
+  border: 1px solid rgba(252, 128, 25, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fc8019; /* subtle orange accent */
+}
+
+.how-i-think__step-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.how-i-think__step-number {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #111111;
+  color: #ffffff;
+  font-size: 0.55rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.how-i-think__step-content {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* Optical spacing Title -> Description */
+  height: auto;
+}
+
+.how-i-think__step-title {
+  font-size: 17px; /* 16-18px range */
+  font-weight: 600; /* weight 600 */
+  color: #111111;
+  margin: 0;
+  line-height: 1.35;
+}
+
+.how-i-think__step-description {
+  font-size: 15px; /* 15px description */
+  line-height: 1.6; /* comfortable scannable line height */
+  color: #4b5563;
+  margin: 0;
+  max-width: 95%; /* limit text width */
+}
+
+/* Accessibility / Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .how-i-think__step {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE LAYOUTS
+   ========================================================================== */
+
+@media (max-width: 992px) {
+  .how-i-think {
+  }
+
+  .how-i-think__journey {
+    margin-top: 36px;
+  }
+
+  .how-i-think__steps {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns grid on tablet */
+    gap: 20px;
+  }
+
+  .how-i-think__step {
+    padding: 24px; /* reduce padding slightly on tablet */
+  }
+}
+
+@media (max-width: 640px) {
+  .how-i-think__steps {
+    grid-template-columns: 1fr; /* single column stack on mobile */
+    gap: 16px;
   }
 }

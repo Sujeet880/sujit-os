@@ -1,0 +1,50 @@
+.social-buttons {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3); /* Generous spacing */
+  flex-wrap: wrap;
+}
+
+.social-buttons__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem; /* Height and width equal standard CTA height (48px) */
+  height: 3rem;
+  border-radius: 50%; /* Perfect circle */
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08); /* Thin neutral border */
+  color: #4b5563; /* Neutral icon color */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02); /* Soft shadow */
+  transition: 
+    border-color 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+    color 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.social-buttons__btn:hover {
+  border-color: var(--primary); /* Orange border */
+  color: var(--primary); /* Orange icon */
+  transform: translateY(-1.5px); /* Very subtle lift */
+  box-shadow: 0 4px 12px rgba(252, 128, 25, 0.08); /* Subtle orange/accented glow */
+}
+
+.social-buttons__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.social-buttons__icon svg {
+  transition: stroke 0.2s ease;
+}
+
+@media (max-width: 640px) {
+  .social-buttons {
+    justify-content: center;
+  }
+}

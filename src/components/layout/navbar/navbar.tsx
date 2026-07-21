@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { forwardRef } from "react";
+import { forwardRef, useEffect, useState } from "react";
 
 import { Button } from "@/components/ui";
 import { cn } from "@/lib/cn";
@@ -17,64 +17,71 @@ import type { NavbarProps } from "./navbar.types";
 export const Navbar = forwardRef<HTMLElement, NavbarProps>(
   ({ className, ...props }, ref) => {
     const activeSection = useActiveSection();
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+      const handleScroll = () => {
+        setIsScrolled(window.scrollY > 8);
+      };
+
+      handleScroll();
+      window.addEventListener("scroll", handleScroll, { passive: true });
+
+      return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     return (
       <header
         ref={ref}
-        className={cn("navbar", className)}
+        className={cn("navbar", className, isScrolled && "navbar--scrolled")}
         {...props}
       >
         <div className="navbar__wrapper">
           {/* Logo */}
           <div className="navbar__brand">
-            <Link href="#home">
-              <span className="navbar__logo">
-                SUJIT
-              </span>
+            <Link href="/">
+              <img 
+                src="/logo.png" 
+                alt="Sujit Kumar" 
+                className="navbar__logo-img" 
+              />
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
           <nav
             className="navbar__center"
             aria-label="Primary Navigation"
           >
             <NavbarItem
-              href="#work"
+              href="/#work"
               label="Work"
               active={activeSection === "work"}
             />
 
             <NavbarItem
-              href="#about"
+              href="/#about"
               label="About"
               active={activeSection === "about"}
             />
 
             <NavbarItem
-              href="#articles"
-              label="Articles"
+              href="/#articles"
+              label="Writing"
               active={activeSection === "articles"}
             />
 
             <NavbarItem
-              href="#contact"
+              href="/#contact"
               label="Contact"
               active={activeSection === "contact"}
             />
           </nav>
 
-          {/* Desktop CTA */}
           <div className="navbar__right">
-            <Link href="/resume.pdf">
-              <Button variant="secondary">
-                Resume
-              </Button>
-            </Link>
-
-            <Link href="mailto:hello@example.com">
-              <Button>
-                Let's Talk
+            <Link href="mailto:ktsujeet1997@gmail.com">
+              <Button className="navbar__cta">
+                <span className="navbar__cta-dot" />
+                <span>Chat with Me</span>
               </Button>
             </Link>
           </div>

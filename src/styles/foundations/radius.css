@@ -16,7 +16,7 @@
      Semantic Radius Tokens
   ========================================== */
 
-  --radius-button: var(--radius-lg);
+  --radius-button: var(--radius-full);
 
   --radius-card: var(--radius-xl);
 

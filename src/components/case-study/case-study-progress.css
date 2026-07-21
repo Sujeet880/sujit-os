@@ -1,0 +1,92 @@
+.case-study-progress {
+  position: fixed;
+  top: 50%;
+  left: clamp(16px, 2.5vw, 40px);
+  transform: translateY(-50%);
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* Hide scrollbar */
+.case-study-progress::-webkit-scrollbar {
+  display: none;
+}
+
+.case-study-progress {
+  scrollbar-width: none;
+}
+
+/* Individual nav item */
+.case-study-progress__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+  cursor: pointer;
+  border: none;
+  background: none;
+  text-align: left;
+  transition: all 220ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Dot indicator */
+.case-study-progress__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #d1d5db;
+  flex-shrink: 0;
+  transition: all 220ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Label text */
+.case-study-progress__label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: #9ca3af;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: all 220ms cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+/* Hover: show label */
+.case-study-progress:hover .case-study-progress__label {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+/* Active state */
+.case-study-progress__item--active .case-study-progress__dot {
+  width: 8px;
+  height: 8px;
+  background: #fc8019;
+  box-shadow: 0 0 0 3px rgba(252, 128, 25, 0.15);
+}
+
+.case-study-progress__item--active .case-study-progress__label {
+  color: #111111;
+  font-weight: 700;
+}
+
+/* Hover on individual item */
+.case-study-progress__item:hover .case-study-progress__dot {
+  background: #fc8019;
+}
+
+.case-study-progress__item:hover .case-study-progress__label {
+  color: #111111;
+}
+
+/* Responsive: hide on tablet and mobile */
+@media (max-width: 1280px) {
+  .case-study-progress {
+    display: none;
+  }
+}

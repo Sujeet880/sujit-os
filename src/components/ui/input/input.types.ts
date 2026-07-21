@@ -26,7 +26,7 @@ export type InputSize =
    ========================================================================== */
 
 export interface InputProps
-  extends InputHTMLAttributes<HTMLInputElement> {
+  extends Omit<InputHTMLAttributes<HTMLInputElement>, "size"> {
   /**
    * Visual style.
    *

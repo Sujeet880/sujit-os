@@ -1,27 +1,162 @@
 .proof-of-impact {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+}
+
+/* Custom override for SectionHeader description inside Proof of Impact */
+.proof-of-impact .section-header__description {
+  margin-top: 8px; /* Heading -> Description gap: 20px (12px gap + 8px margin) */
+  max-width: 680px; /* Maximum 680px width */
+  margin-inline: auto;
 }
 
 .proof-of-impact__grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1.5rem;
+  gap: 24px; /* Balanced spacing gap */
+  margin-top: 48px; /* Spacing between section header and grid: 48px */
 }
 
-@media (max-width: 1024px) {
+.proof-of-impact__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 36px;
+  justify-content: center; /* Center horizontally for balance */
+}
+
+.proof-of-impact__tags span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px; /* Height 32px */
+  padding-inline: 16px; /* Padding horizontal 16px */
+  border: 1px solid rgba(0, 0, 0, 0.04); /* Subtle border */
+  border-radius: 999px; /* Match Hero CTA radius */
+  background: #ffffff;
+  color: #4b5563;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  transition: all 200ms ease;
+}
+
+.proof-of-impact__tags span:hover {
+  background: rgba(252, 128, 25, 0.05); /* Very subtle orange tint */
+  border-color: rgba(252, 128, 25, 0.15);
+  color: #fc8019;
+}
+
+/* Metric card overrides to ensure absolute consistency */
+.proof-of-impact .metric-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  height: 100%;
+  padding: 28px; /* Padding: 28px */
+  border: 1px solid rgba(17, 17, 17, 0.06); /* 1px subtle border */
+  border-radius: 18px; /* Border radius 18px */
+  background: #ffffff;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.01),
+    0 8px 24px -12px rgba(0, 0, 0, 0.03); /* Soft elevation */
+  transition: all 220ms cubic-bezier(0.16, 1, 0.3, 1); /* Transition 220ms */
+  
+  /* Scroll fade + translateY */
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.proof-of-impact .metric-card--in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.proof-of-impact .metric-card:nth-child(even) {
+  background: #FFF9F4 !important; /* Very subtle warm surface */
+}
+
+.proof-of-impact .metric-card:hover {
+  border-color: rgba(17, 17, 17, 0.12); /* Border slightly stronger */
+  transform: translateY(-3px); /* translateY(-3px) hover lift */
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.01),
+    0 16px 32px -12px rgba(0, 0, 0, 0.08); /* Shadow slightly increases */
+}
+
+.proof-of-impact .metric-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px; /* squircle icon background matching How I Think */
+  background: rgba(252, 128, 25, 0.06);
+  border: 1px solid rgba(252, 128, 25, 0.15);
+  color: #fc8019; /* Subtle orange accent icon */
+}
+
+.proof-of-impact .metric-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.proof-of-impact .metric-card__value {
+  font-size: clamp(2.5rem, 6vw, 3.25rem); /* Visual focus focus focus */
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: #111111;
+  margin: 0;
+}
+
+.proof-of-impact .metric-card__label {
+  font-size: 1.05rem; /* Title remains secondary */
+  font-weight: 600;
+  color: #374151;
+  margin: 0;
+  line-height: 1.35;
+}
+
+.proof-of-impact .metric-card__description {
+  font-size: 0.875rem; /* Description feels lighter */
+  line-height: 1.55;
+  color: #6b7280;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Accessibility / Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .proof-of-impact .metric-card {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE LAYOUTS
+   ========================================================================== */
+
+@media (max-width: 992px) {
+  .proof-of-impact {
+  }
+
   .proof-of-impact__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 columns grid on tablet */
+    gap: 20px;
+    margin-top: 36px;
+  }
+
+  .proof-of-impact .metric-card {
+    padding: 24px; /* reduce card padding slightly */
   }
 }
 
 @media (max-width: 640px) {
-  .proof-of-impact {
-    gap: 3rem;
-  }
-
   .proof-of-impact__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* single column grid on mobile */
+    gap: 16px;
   }
 }
