@@ -5,17 +5,20 @@
 
 /* Custom override for SectionHeader description inside About */
 .about .section-header__description {
-  margin-top: 8px; /* Heading -> Description gap: 20px */
+  margin-top: 8px;
+  /* Heading -> Description gap: 20px */
   max-width: 680px;
   margin-inline: auto;
 }
 
 .about__content {
   display: grid;
-  grid-template-columns: 0.85fr 1.15fr; /* Central focus on storytelling text column */
+  grid-template-columns: 0.85fr 1.15fr;
+  /* Central focus on storytelling text column */
   gap: var(--space-12);
   align-items: flex-start;
-  margin-top: 48px; /* Spacing between section header and grid: 48px */
+  margin-top: 48px;
+  /* Spacing between section header and grid: 48px */
 }
 
 /* --- Left Column: Canvas Portrait --- */
@@ -31,11 +34,13 @@
   width: 100%;
   max-width: 360px;
   aspect-ratio: 0.95;
-  border-radius: 16px; /* consistent border radius */
+  border-radius: 16px;
+  /* consistent border radius */
   padding: 0.5rem;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.04);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03); /* subtle shadow */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  /* subtle shadow */
   z-index: 2;
   transition: transform 250ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 250ms cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -66,7 +71,8 @@
 }
 
 .about__canvas-blueprint {
-  display: none; /* Removed heavy/distracting background decoration */
+  display: none;
+  /* Removed heavy/distracting background decoration */
 }
 
 /* --- Right Column: Story Copy --- */
@@ -88,9 +94,12 @@
   display: flex;
   flex-direction: column;
   margin-top: 32px;
-  margin-bottom: 32px; /* Increase whitespace around quote */
-  padding-left: 20px; /* Whitespace on left */
-  border-left: 3px solid #fc8019; /* Subtle Swiggy Orange accent line */
+  margin-bottom: 32px;
+  /* Increase whitespace around quote */
+  padding-left: 20px;
+  /* Whitespace on left */
+  border-left: 3px solid #fc8019;
+  /* Subtle Swiggy Orange accent line */
   gap: 8px;
 }
 
@@ -105,17 +114,22 @@
 
 .about__paragraph {
   font-size: 1.05rem;
-  line-height: 1.65; /* Improved line height */
+  line-height: 1.65;
+  /* Improved line height */
   color: #4b5563;
   margin: 0;
-  max-width: 680px; /* Readability maximum width */
+  max-width: 680px;
+  /* Readability maximum width */
 }
 
 .about__philosophy .about__paragraph {
-  font-size: 1.15rem; /* Visual highlight typography */
+  font-size: 1.15rem;
+  /* Visual highlight typography */
   line-height: 1.6;
-  color: #111111; /* Dark contrast */
-  font-style: italic; /* Elegant italic styling */
+  color: #111111;
+  /* Dark contrast */
+  font-style: italic;
+  /* Elegant italic styling */
   font-weight: 500;
   max-width: 620px;
 }
@@ -132,15 +146,20 @@
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  padding: 28px; /* consistent internal padding */
-  background: #ffffff; /* soft background */
-  border: 1px solid rgba(17, 17, 17, 0.06); /* 1px subtle neutral border */
-  border-radius: 18px; /* 18px border radius */
+  padding: 28px;
+  /* consistent internal padding */
+  background: #ffffff;
+  /* soft background */
+  border: 1px solid rgba(17, 17, 17, 0.06);
+  /* 1px subtle neutral border */
+  border-radius: 18px;
+  /* 18px border radius */
   box-shadow:
     0 1px 2px rgba(0, 0, 0, 0.01),
-    0 8px 24px -12px rgba(0, 0, 0, 0.03); /* soft elevation */
+    0 8px 24px -12px rgba(0, 0, 0, 0.03);
+  /* soft elevation */
   transition: all 220ms cubic-bezier(0.16, 1, 0.3, 1);
-  
+
   /* scroll animations setting */
   opacity: 0;
   transform: translateY(20px);
@@ -152,11 +171,14 @@
 }
 
 .about__value-card:hover {
-  transform: translateY(-4px); /* translateY(-4px) hover lift */
-  border-color: rgba(17, 17, 17, 0.12); /* border slightly stronger */
+  transform: translateY(-4px);
+  /* translateY(-4px) hover lift */
+  border-color: rgba(17, 17, 17, 0.12);
+  /* border slightly stronger */
   box-shadow:
     0 4px 6px rgba(0, 0, 0, 0.01),
-    0 16px 32px -12px rgba(0, 0, 0, 0.08); /* shadow slightly increases */
+    0 16px 32px -12px rgba(0, 0, 0, 0.08);
+  /* shadow slightly increases */
 }
 
 .about__value-icon {
@@ -165,10 +187,12 @@
   justify-content: center;
   width: 36px;
   height: 36px;
-  border-radius: 8px; /* Squircle icon block matching How I Think */
+  border-radius: 8px;
+  /* Squircle icon block matching How I Think */
   background: rgba(252, 128, 25, 0.06);
   border: 1px solid rgba(252, 128, 25, 0.15);
-  color: #fc8019; /* subtle orange accent */
+  color: #fc8019;
+  /* subtle orange accent */
   flex-shrink: 0;
 }
 
@@ -198,19 +222,24 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 32px; /* Height 32px */
-  padding-inline: 16px; /* padding horizontal 16px */
+  height: 32px;
+  /* Height 32px */
+  padding-inline: 16px;
+  /* padding horizontal 16px */
   font-size: 0.8125rem;
   font-weight: 600;
   color: #4b5563;
   background: #f3f4f6;
-  border-radius: 999px; /* rounded pill */
-  border: 1px solid rgba(0, 0, 0, 0.04); /* subtle border */
+  border-radius: 999px;
+  /* rounded pill */
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  /* subtle border */
   transition: all 200ms ease;
 }
 
 .about__skill-pill:hover {
-  background: rgba(252, 128, 25, 0.05); /* very subtle orange tint hover */
+  background: rgba(252, 128, 25, 0.05);
+  /* very subtle orange tint hover */
   border-color: rgba(252, 128, 25, 0.15);
   color: #fc8019;
 }
@@ -235,8 +264,7 @@
    ========================================================================== */
 
 @media (max-width: 992px) {
-  .about {
-  }
+  .about {}
 
   .about__content {
     grid-template-columns: 1fr;
@@ -245,7 +273,8 @@
   }
 
   .about__image-column {
-    order: 2; /* Center story content first, graphics underneath on mobile */
+    order: 2;
+    /* Center story content first, graphics underneath on mobile */
   }
 
   .about__text-column {
@@ -253,6 +282,14 @@
   }
 
   .about__value-card {
-    padding: 24px; /* reduce padding slightly on small viewports */
+    padding: 24px;
+    /* reduce padding slightly on small viewports */
+  }
+}
+
+@media (max-width: 640px) {
+  .about__edu-certs-block {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-6) !important;
   }
 }

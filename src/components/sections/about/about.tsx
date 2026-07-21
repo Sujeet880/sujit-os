@@ -154,6 +154,45 @@ export const About = forwardRef<HTMLElement, AboutProps>(
                   ))}
                 </div>
               </div>
+
+              {/* Tools & Technologies */}
+              <div className="about__skills-block" style={{ marginTop: "24px" }}>
+                <h3 className="about__subtitle">Tools & Technologies</h3>
+                <div className="about__tools-tech-list" style={{ display: "flex", flexDirection: "column", gap: "12px", marginTop: "8px" }}>
+                  <p className="about__paragraph" style={{ fontSize: "0.9375rem", lineHeight: "1.5", color: "#4b5563" }}>
+                    <strong>Design:</strong> Figma, Figma Make, Adobe XD, Illustrator, Photoshop
+                  </p>
+                  <p className="about__paragraph" style={{ fontSize: "0.9375rem", lineHeight: "1.5", color: "#4b5563" }}>
+                    <strong>AI-Assisted Workflow:</strong> Use ChatGPT and Claude to synthesize raw research notes into thematic insights, and Figma AI for rapid low-fidelity variant generation during early exploration — speeding up initial concepting while keeping evaluation and final design decisions manual.
+                  </p>
+                  <p className="about__paragraph" style={{ fontSize: "0.9375rem", lineHeight: "1.5", color: "#4b5563" }}>
+                    <strong>Collaboration:</strong> Notion, Slack, Asana
+                  </p>
+                </div>
+              </div>
+
+              {/* Education & Certifications */}
+              <div className="about__edu-certs-block" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px", marginTop: "24px" }}>
+                <div className="about__education">
+                  <h3 className="about__subtitle">Education</h3>
+                  <div style={{ marginTop: "8px" }}>
+                    <h4 style={{ fontSize: "1.05rem", fontWeight: "700", color: "#111111", margin: "0" }}>B.Com in Accounting</h4>
+                    <span style={{ fontSize: "0.8125rem", color: "#9ca3af", fontWeight: "500" }}>Babasaheb Bhimrao Ambedkar University, Bihar (2018)</span>
+                    <p className="about__paragraph" style={{ fontSize: "0.875rem", lineHeight: "1.5", color: "#6b7280", marginTop: "8px" }}>
+                      Background in accounting and business analysis informs a data- and process-driven approach to design — evident in ERP, logistics, and B2B SaaS work where operational logic and business rules shape the interface.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="about__certifications">
+                  <h3 className="about__subtitle">Certifications</h3>
+                  <div style={{ marginTop: "8px" }}>
+                    <h4 style={{ fontSize: "1.05rem", fontWeight: "700", color: "#111111", margin: "0" }}>Google UX Design Certificate</h4>
+                    <h4 style={{ fontSize: "1.05rem", fontWeight: "700", color: "#111111", margin: "8px 0 0 0" }}>Graphic Elements of Design</h4>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </Container>

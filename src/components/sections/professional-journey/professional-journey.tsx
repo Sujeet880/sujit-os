@@ -18,7 +18,7 @@ interface ExperienceItem {
   role: string;
   duration: string;
   description?: string;
-  projects?: { name: string; subtitle?: string; description: string }[];
+  projects?: { name: string; subtitle?: string; description?: string; bullets?: string[] }[];
   keyResponsibilities?: string[];
   businessImpact?: string;
   skills: string[];
@@ -34,13 +34,23 @@ const experiences: ExperienceItem[] = [
     projects: [
       {
         name: "Mirari Surface",
-        subtitle: "Embedded Smart Home Control Platform",
-        description: "Designed an embedded touch panel and companion mobile application for controlling, monitoring and automating connected smart home devices while creating a consistent experience across hardware and mobile interfaces."
+        subtitle: "Smart Home IoT Platform",
+        bullets: [
+          "Led end-to-end design of a smart-home IoT ecosystem spanning an embedded touch-panel interface and companion mobile app; chose a shared interaction language across both surfaces so users would not need to relearn controls when switching between panel and app.",
+          "Designed onboarding and device-management flows within ESP32-S3 hardware constraints, prioritizing a small set of high-frequency actions over exhaustive configuration screens to keep the interface usable on limited hardware.",
+          "Designed scene-creation flows enabling users to group and automate multiple devices, balancing flexibility for advanced users against simplicity for first-time setup.",
+          "Partnered directly with hardware and firmware teams from early discovery so technical constraints surfaced before high-fidelity design work began — contributing to a 75% faster go-live timeline versus the team's prior integration cycle."
+        ]
       },
       {
         name: "CA Operating System",
-        subtitle: "Enterprise SaaS Platform for Chartered Accountant Firms",
-        description: "Designed an end-to-end operating system that streamlined client onboarding, compliance workflows, document management, billing and internal operations into one connected enterprise platform."
+        subtitle: "SaaS Platform for Chartered Accountant Firms",
+        bullets: [
+          "Led product strategy and UX for a SaaS platform reimagining fragmented Chartered Accountant firm operations into one connected ecosystem, replacing 6–7 disconnected tools (spreadsheets, WhatsApp, personal calendars, manual reminders) with a single connected system.",
+          "Conducted end-to-end operational research across lead management, client onboarding, document collection, compliance, and payments; identified that operational fragmentation — not accounting complexity — was the root usability problem, reframing the product from a dashboard into a full operating system.",
+          "Defined product architecture and information model before visual design, mapping relationships across leads, clients, documents, payments, and compliance around a single client profile ('Client Timeline') and restructuring navigation around user tasks to reduce cross-module context switching.",
+          "Architected for scale from day one — role-based permissions, multi-tenant structure, and organization-level settings — and designed automation workflows (recurring compliance reminders, payment follow-ups, auto-generated document requests) to remove repetitive manual coordination across the client lifecycle."
+        ]
       }
     ],
     skills: ["Enterprise IoT", "Embedded UX", "Product Strategy", "Cross-functional Collaboration", "Enterprise SaaS"]
@@ -48,13 +58,13 @@ const experiences: ExperienceItem[] = [
   {
     company: "Cooter:Labs",
     logoText: "CL",
-    role: "Senior UX/UI Designer",
+    role: "Senior UX/UI Designer (Contract)",
     duration: "Apr 2025 – Dec 2025",
     keyResponsibilities: [
-      "Redesigned logistics ERP workflows after user research identified major usability challenges across critical operational tasks.",
-      "Built reusable design systems and improved information architecture to simplify complex enterprise workflows."
+      "Redesigned logistics ERP workflows after research surfaced usability issues affecting 70%+ of surveyed users; prioritized the top friction points over a full rebuild to ship measurable improvement within the contract timeline.",
+      "Restructured information architecture and task flows based on task-analysis sessions with active users, cutting redundant manual steps across core logistics operations.",
+      "Built and scaled a modular design system on Atomic Design principles, choosing reusable components over one-off screens to reduce design-to-dev handoff time; ran agile sprints with product, engineering, and business stakeholders."
     ],
-    businessImpact: "Reduced manual workflow complexity while improving collaboration between design and engineering teams.",
     skills: ["Enterprise SaaS", "ERP", "Information Architecture", "Design Systems"]
   },
   {
@@ -63,10 +73,11 @@ const experiences: ExperienceItem[] = [
     role: "Product Designer",
     duration: "May 2023 – Mar 2025",
     keyResponsibilities: [
-      "Led end-to-end product design across enterprise dashboards and white-label mobile applications used by global channel partners.",
-      "Improved onboarding, accessibility and scalable design systems through research-driven product decisions."
+      "Owned end-to-end product design for a white-label loyalty platform spanning mobile and enterprise dashboard experiences across multiple markets, with design contributions supporting ₹7Cr+ in platform business impact and 25% YoY growth across 50+ enterprise brands and 5M+ channel partners.",
+      "Identified high drop-off in a single long-form onboarding flow; chose to split it into three logical sections (general details, business information, address) with save-and-resume — over a single-page redesign — after interviews showed users often completed onboarding across multiple sessions. Validated the change through A/B testing and secured buy-in from product managers and operations before rollout.",
+      "Mentored junior and peer designers through design reviews and structured feedback; separately mentored aspiring designers outside the organization — 3 of 4 mentees are now working professionally as junior designers.",
+      "Built scalable white-label design frameworks with Product, Engineering, Operations, and Sales, choosing token-based theming over per-client custom builds; ran accessibility audits across the dashboard and white-label app, prioritizing WCAG fixes that reduced onboarding time and downstream development rework."
     ],
-    businessImpact: "Supported ₹7Cr+ business impact across 50+ enterprise brands and more than 5M channel partners.",
     skills: ["B2B SaaS", "White-label Products", "Accessibility", "Product Strategy"]
   },
   {
@@ -75,10 +86,10 @@ const experiences: ExperienceItem[] = [
     role: "UX/UI Designer",
     duration: "Apr 2022 – Apr 2023",
     keyResponsibilities: [
-      "Designed web and mobile experiences across multiple industries including sustainability, education and e-commerce.",
-      "Created user journeys, wireframes and high-fidelity interfaces while collaborating closely with engineering teams."
+      "Delivered end-to-end UX for web and mobile products across waste management, ed-tech, e-commerce, and sustainability domains, adapting research and design approach per domain rather than applying a single playbook given how different each user base's context and constraints were.",
+      "Defined user journeys, information architecture, wireframes, and high-fidelity interfaces, prioritizing the flows with the highest user drop-off first when timelines were tight.",
+      "Worked closely with engineering to keep designs buildable within sprint constraints, flagging scope trade-offs early rather than after handoff."
     ],
-    businessImpact: "Delivered user-centered experiences that balanced business goals with technical feasibility.",
     skills: ["UX Research", "Wireframing", "Interaction Design", "Cross-functional Collaboration"]
   },
   {
@@ -87,10 +98,9 @@ const experiences: ExperienceItem[] = [
     role: "UX/UI Designer",
     duration: "Oct 2021 – Mar 2022",
     keyResponsibilities: [
-      "Designed intuitive web interfaces and reusable UI patterns for early-stage startup products.",
-      "Worked directly with founders and developers to rapidly ship user-focused product experiences."
+      "Designed wireframes, UI screens, and front-end style guides for early-stage web products, establishing simple, reusable interaction patterns so founders could self-serve new pages without ongoing design support.",
+      "Worked directly with founders and developers in a fast-paced startup environment, prioritizing shipping usable interfaces quickly over polish given limited resources."
     ],
-    businessImpact: "Helped startups launch usable products faster through simple, scalable interface design.",
     skills: ["UI Design", "Design Systems", "Startups", "Rapid Prototyping"]
   }
 ];
@@ -186,7 +196,19 @@ export const ProfessionalJourney = forwardRef<
                           {proj.subtitle && (
                             <span className="professional-journey__project-subtitle">{proj.subtitle}</span>
                           )}
-                          <p className="professional-journey__project-description">{proj.description}</p>
+                          {proj.description && (
+                            <p className="professional-journey__project-description">{proj.description}</p>
+                          )}
+                          {proj.bullets && (
+                            <ul className="professional-journey__list" style={{ marginTop: "8px" }}>
+                              {proj.bullets.map((bullet, bIdx) => (
+                                <li key={bIdx} className="professional-journey__list-item">
+                                  <span className="professional-journey__list-bullet">→</span>
+                                  <span className="professional-journey__list-text">{bullet}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
                         </div>
                       ))}
                     </div>
