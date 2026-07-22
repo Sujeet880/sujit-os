@@ -34,6 +34,27 @@ export const featuredProjects: Project[] = [
     href: "/case-studies/mirari-surface-dashboard"
   },
   {
+    category: "ENTERPRISE SAAS",
+    title: "Designing an Operating System for Modern Chartered Accountant Firms",
+    description: "Instead of building another CRM or compliance tool, I designed a connected operating system that transforms fragmented accounting workflows into one scalable SaaS ecosystem.",
+    role: "Product Designer",
+    timeline: "Concept Project",
+    businessImpact: [
+      "Unifies disconnected enterprise accounting tools.",
+      "Transforms fragmented compliance and client workflows.",
+      "Simplifies operations and reduces manual effort."
+    ],
+    tags: [
+      "Enterprise SaaS",
+      "Product Strategy",
+      "Systems Thinking",
+      "UX Design",
+      "Workflow Design"
+    ],
+    image: "/doctor_platform.png",
+    href: "/work/ca-operating-system"
+  },
+  {
     category: "ENTERPRISE LOYALTY PLATFORM",
     title: "Scaling a White-label Loyalty Platform",
     description: "Helped evolve a white-label enterprise loyalty platform serving 50+ brands and more than 5 million channel partners. Focused on scalable product experiences, reusable design systems and enterprise workflows across both the dashboard and mobile application.",

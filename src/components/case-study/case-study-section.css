@@ -1126,6 +1126,105 @@
   }
 }
 
+/* ==========================================================================
+   WORKFLOW TIMELINE
+   ========================================================================== */
+
+.workflow-timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  padding-left: 2rem;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.workflow-timeline::before {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--border);
+  z-index: 1;
+}
+
+.workflow-timeline__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-block: 0.75rem;
+  width: 100%;
+}
+
+.workflow-timeline__node {
+  position: absolute;
+  left: -2rem; /* align with indicator line */
+  transform: translateX(-50%);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  border: 2px solid var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.workflow-timeline__number {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.workflow-timeline__content {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.75rem 1.25rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.01), 0 8px 24px -12px rgba(0, 0, 0, 0.03);
+  min-width: 260px;
+  max-width: 100%;
+  transition: border-color 220ms ease, transform 220ms ease;
+}
+
+.workflow-timeline__content:hover {
+  border-color: var(--card-border-hover);
+  transform: translateY(-1px);
+}
+
+.workflow-timeline__title {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+/* ==========================================================================
+   TOC RESPONSIVE NAV
+   ========================================================================== */
+
+.desktop-toc {
+  display: flex;
+}
+
+.mobile-toc {
+  display: none;
+}
+
+@media (max-width: 1280px) {
+  .desktop-toc {
+    display: none !important;
+  }
+  .mobile-toc {
+    display: block !important;
+  }
+}
+
 
 
 
