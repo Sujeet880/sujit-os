@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: "/digital_banking.png",
+        url: "https://sujitkumar.design/digital_banking.png",
         width: 1200,
         height: 630,
         alt: "Gynger Loyalty Platform - Enterprise loyalty program systems",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Gynger Loyalty Platform — Scaling Enterprise Loyalty",
     description: "Case study on evolving and scaling the Gynger Enterprise loyalty SaaS platform serving 50+ brands and 5M+ channel partners.",
-    images: ["/digital_banking.png"],
+    images: ["https://sujitkumar.design/digital_banking.png"],
   },
 };
 

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: "/doctor_platform.png",
+        url: "https://sujitkumar.design/doctor_platform.png",
         width: 1200,
         height: 630,
         alt: "CA Operating System - Enterprise accounting operations SaaS",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "CA Operating System — Designing an OS for Modern CA Firms",
     description: "Enterprise SaaS case study on designing a connected operating system that transforms fragmented accounting workflows into one scalable SaaS ecosystem.",
-    images: ["/doctor_platform.png"],
+    images: ["https://sujitkumar.design/doctor_platform.png"],
   },
 };
 

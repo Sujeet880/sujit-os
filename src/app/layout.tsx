@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/opengraph-image.png",
+        url: "https://sujitkumar.design/opengraph-image.png",
         width: 1200,
         height: 630,
         alt: "Sujit Kumar - Senior Product Designer",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Sujit Kumar | Senior Product Designer",
     description: "Product Designer specializing in Enterprise SaaS, UX Strategy, Systems Thinking, Design Systems, IoT, and Embedded Interfaces.",
-    images: ["/opengraph-image.png"],
+    images: ["https://sujitkumar.design/opengraph-image.png"],
   },
   icons: {
     icon: [

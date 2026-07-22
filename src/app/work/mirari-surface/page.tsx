@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: "/hotel_platform.png",
+        url: "https://sujitkumar.design/hotel_platform.png",
         width: 1200,
         height: 630,
         alt: "Mirari Surface - Smart Switchboard Control Experience",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mirari Surface — Designing a Smart Home Control Experience",
     description: "Flagship case study on designing a smart home control experience for Mirari Surface touch screens and companion mobile apps.",
-    images: ["/hotel_platform.png"],
+    images: ["https://sujitkumar.design/hotel_platform.png"],
   },
 };
 
