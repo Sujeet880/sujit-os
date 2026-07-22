@@ -1,8 +1,8 @@
 .case-study-image {
   width: 100%;
   border-radius: 18px;
-  border: 1px solid rgba(17, 17, 17, 0.06);
-  background: #f9fafb;
+  border: 1px solid var(--border);
+  background: var(--surface-secondary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,7 +35,7 @@
 .case-study-image__label {
   font-size: 0.875rem;
   font-weight: 600;
-  color: #9ca3af;
+  color: var(--foreground-subtle);
   letter-spacing: 0.02em;
   text-align: center;
   padding: 24px;
@@ -47,8 +47,8 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(45deg, transparent 48%, rgba(17, 17, 17, 0.02) 48%, rgba(17, 17, 17, 0.02) 52%, transparent 52%),
-    linear-gradient(-45deg, transparent 48%, rgba(17, 17, 17, 0.02) 48%, rgba(17, 17, 17, 0.02) 52%, transparent 52%);
+    linear-gradient(45deg, transparent 48%, var(--border-muted) 48%, var(--border-muted) 52%, transparent 52%),
+    linear-gradient(-45deg, transparent 48%, var(--border-muted) 48%, var(--border-muted) 52%, transparent 52%);
   background-size: 24px 24px;
   pointer-events: none;
 }
@@ -63,7 +63,7 @@
 .case-study-image__caption {
   font-size: 0.8125rem;
   line-height: 1.5;
-  color: #9ca3af;
+  color: var(--foreground-subtle);
   text-align: center;
   font-style: italic;
 }

@@ -38,7 +38,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #d1d5db;
+  background: var(--border);
   flex-shrink: 0;
   transition: all 220ms cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -47,7 +47,7 @@
 .case-study-progress__label {
   font-size: 0.6875rem;
   font-weight: 600;
-  color: #9ca3af;
+  color: var(--foreground-subtle);
   white-space: nowrap;
   opacity: 0;
   transform: translateX(-4px);
@@ -66,22 +66,22 @@
 .case-study-progress__item--active .case-study-progress__dot {
   width: 8px;
   height: 8px;
-  background: #fc8019;
-  box-shadow: 0 0 0 3px rgba(252, 128, 25, 0.15);
+  background: var(--primary);
+  box-shadow: 0 0 0 3px var(--selection-background);
 }
-
+ 
 .case-study-progress__item--active .case-study-progress__label {
-  color: #111111;
+  color: var(--foreground);
   font-weight: 700;
 }
 
 /* Hover on individual item */
 .case-study-progress__item:hover .case-study-progress__dot {
-  background: #fc8019;
+  background: var(--primary);
 }
-
+ 
 .case-study-progress__item:hover .case-study-progress__label {
-  color: #111111;
+  color: var(--foreground);
 }
 
 /* Responsive: hide on tablet and mobile */

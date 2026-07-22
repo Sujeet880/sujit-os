@@ -4,7 +4,149 @@
 }
 
 .case-study-section + .case-study-section {
-  border-top: 1px solid rgba(17, 17, 17, 0.06);
+  border-top: 1px solid var(--border);
+}
+
+/* Theme overrides for Case Study Sections */
+.case-study-section__badge {
+  color: var(--primary) !important;
+}
+
+.case-study-section__title,
+.case-study-section__hook,
+.case-study-section__callout-text {
+  color: var(--foreground) !important;
+}
+
+.case-study-section__intro,
+.case-study-section__body p,
+.case-study-section__body li {
+  color: var(--foreground-muted) !important;
+}
+
+.case-study-section__callout {
+  background: var(--primary-light) !important;
+  border-left: 3px solid var(--primary) !important;
+}
+
+.case-study-section__callout-title {
+  color: var(--primary) !important;
+}
+
+.case-study-snapshot__card,
+.case-study-challenge__card,
+.case-study-constraints__card,
+.case-study-insights__card,
+.case-study-principles__card,
+.case-study-strategy__card,
+.case-study-patterns__card,
+.case-study-accessibility__card,
+.case-study-outcomes__card,
+.case-study-improvements__card,
+.case-study-complexity__card,
+.case-study-role__card,
+.case-study-stakeholder__card,
+.case-study-design-scale__card,
+.case-study-white-label__card,
+.case-study-dashboard__card,
+.case-study-mobile-improvements__card,
+.case-study-design-system__card,
+.case-study-impact__card {
+  background: var(--surface) !important;
+  border-color: var(--border) !important;
+}
+
+.case-study-snapshot__card:hover,
+.case-study-challenge__card:hover,
+.case-study-constraints__card:hover,
+.case-study-insights__card:hover,
+.case-study-principles__card:hover,
+.case-study-strategy__card:hover,
+.case-study-patterns__card:hover,
+.case-study-accessibility__card:hover,
+.case-study-outcomes__card:hover,
+.case-study-improvements__card:hover,
+.case-study-complexity__card:hover,
+.case-study-role__card:hover,
+.case-study-stakeholder__card:hover,
+.case-study-design-scale__card:hover,
+.case-study-white-label__card:hover,
+.case-study-dashboard__card:hover,
+.case-study-mobile-improvements__card:hover,
+.case-study-design-system__card:hover,
+.case-study-impact__card:hover {
+  border-color: var(--card-border-hover) !important;
+}
+
+.case-study-snapshot__card:nth-child(even),
+.case-study-challenge__card:nth-child(even),
+.case-study-constraints__card:nth-child(even),
+.case-study-insights__card:nth-child(even),
+.case-study-principles__card:nth-child(even),
+.case-study-strategy__card:nth-child(even),
+.case-study-patterns__card:nth-child(even),
+.case-study-accessibility__card:nth-child(even),
+.case-study-outcomes__card:nth-child(even),
+.case-study-improvements__card:nth-child(even),
+.case-study-complexity__card:nth-child(even),
+.case-study-role__card:nth-child(even),
+.case-study-stakeholder__card:nth-child(even),
+.case-study-design-scale__card:nth-child(even),
+.case-study-white-label__card:nth-child(even),
+.case-study-dashboard__card:nth-child(even),
+.case-study-mobile-improvements__card:nth-child(even),
+.case-study-design-system__card:nth-child(even),
+.case-study-impact__card:nth-child(even) {
+  background: var(--primary-light) !important;
+}
+
+.case-study-snapshot__card-title {
+  color: var(--foreground-subtle) !important;
+}
+
+.case-study-snapshot__card-content p,
+.case-study-challenge__card-text,
+.case-study-constraints__card-text,
+.case-study-insights__card-text,
+.case-study-principles__card-text,
+.case-study-complexity__card-text,
+.case-study-role__card-text,
+.case-study-stakeholder__card-text,
+.case-study-design-scale__card-text,
+.case-study-white-label__card-text,
+.case-study-dashboard__card-text,
+.case-study-mobile-improvements__card-text,
+.case-study-design-system__card-text {
+  color: var(--foreground-muted) !important;
+}
+
+.case-study-snapshot__card-content .case-study-snapshot__card-highlight,
+.case-study-challenge__card-title,
+.case-study-constraints__card-title,
+.case-study-insights__card-title,
+.case-study-principles__card-title,
+.case-study-strategy__card-title,
+.case-study-patterns__card-title,
+.case-study-accessibility__card-title,
+.case-study-outcomes__card-title,
+.case-study-improvements__card-title,
+.case-study-complexity__card-title,
+.case-study-role__card-title,
+.case-study-stakeholder__card-title,
+.case-study-design-scale__card-title,
+.case-study-white-label__card-title,
+.case-study-dashboard__card-title,
+.case-study-mobile-improvements__card-title,
+.case-study-design-system__card-title {
+  color: var(--foreground) !important;
+}
+
+.case-study-snapshot__focus-list li {
+  color: var(--foreground-muted) !important;
+}
+
+.case-study-snapshot__focus-list li::before {
+  color: var(--primary) !important;
 }
 
 .case-study-section__inner {

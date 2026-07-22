@@ -31,8 +31,8 @@
 .how-i-think__step {
   display: flex;
   flex-direction: column;
-  background: #ffffff; /* Existing design system */
-  border: 1px solid rgba(17, 17, 17, 0.06); /* 1px subtle neutral border */
+  background: var(--surface); /* Existing design system */
+  border: 1px solid var(--border); /* 1px subtle neutral border */
   border-radius: 18px; /* Border radius 18px */
   padding: 28px; /* Internal padding 28px */
   box-shadow:
@@ -63,19 +63,19 @@
 
 .how-i-think__step:hover {
   transform: translateY(-3px) !important; /* translateY(-3px) hover lift */
-  border-color: rgba(17, 17, 17, 0.12) !important; /* Border slightly stronger */
+  border-color: var(--card-border-hover) !important; /* Border slightly stronger */
   box-shadow:
     0 4px 6px rgba(0, 0, 0, 0.01),
     0 16px 32px -12px rgba(0, 0, 0, 0.08) !important; /* Shadow slightly increases */
 }
 
 .how-i-think__step--highlighted {
-  background: #fbfbfa !important; /* subtle light cream/surface background */
-  border-top: 2px solid #fc8019 !important; /* orange accent line to guide the eye */
+  background: var(--surface-secondary) !important; /* subtle light cream/surface background */
+  border-top: 2px solid var(--primary) !important; /* orange accent line to guide the eye */
 }
-
+ 
 .how-i-think__step:nth-child(even) {
-  background: #FFF9F4 !important; /* Very subtle warm surface */
+  background: var(--primary-light) !important; /* Very subtle warm surface */
 }
 
 .how-i-think__step-header {
@@ -89,12 +89,12 @@
   width: 36px;
   height: 36px;
   border-radius: 8px; /* small modern squircle */
-  background: rgba(252, 128, 25, 0.06); /* subtle orange accent background */
-  border: 1px solid rgba(252, 128, 25, 0.15);
+  background: var(--primary-light); /* subtle orange accent background */
+  border: 1px solid rgba(252, 128, 25, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fc8019; /* subtle orange accent */
+  color: var(--primary); /* subtle orange accent */
 }
 
 .how-i-think__step-icon {
@@ -110,8 +110,8 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: #111111;
-  color: #ffffff;
+  background: var(--foreground);
+  color: var(--background);
   font-size: 0.55rem;
   font-weight: 700;
   display: flex;
@@ -133,15 +133,15 @@
 .how-i-think__step-title {
   font-size: 17px; /* 16-18px range */
   font-weight: 600; /* weight 600 */
-  color: #111111;
+  color: var(--foreground);
   margin: 0;
   line-height: 1.35;
 }
-
+ 
 .how-i-think__step-description {
   font-size: 15px; /* 15px description */
   line-height: 1.6; /* comfortable scannable line height */
-  color: #4b5563;
+  color: var(--foreground-muted);
   margin: 0;
   max-width: 95%; /* limit text width */
 }

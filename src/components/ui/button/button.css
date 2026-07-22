@@ -40,25 +40,25 @@
 
 .button--primary {
   background: var(--primary);
-  color: #ffffff;
+  color: var(--primary-foreground);
   border-color: var(--primary);
 }
 
 .button--primary:hover:not(:disabled) {
-  background: #e06b0d; /* Slightly darker orange */
-  border-color: #e06b0d;
+  background: var(--primary-hover);
+  border-color: var(--primary-hover);
   transform: translateY(-1.5px);
   box-shadow: 0 4px 12px rgba(252, 128, 25, 0.15); /* Soft shadow */
 }
 
 .button--secondary {
-  background: #ffffff;
-  color: #111111;
-  border-color: rgba(0, 0, 0, 0.08);
+  background: var(--button-secondary-bg);
+  color: var(--button-secondary-text);
+  border-color: var(--button-secondary-border);
 }
 
 .button--secondary:hover:not(:disabled) {
-  background: #ffffff;
+  background: var(--button-secondary-hover-bg);
   color: var(--primary);
   border-color: var(--primary);
   transform: translateY(-1.5px);
@@ -66,13 +66,13 @@
 }
 
 .button--outline {
-  background: #ffffff;
-  color: #111111;
-  border-color: rgba(0, 0, 0, 0.08);
+  background: var(--button-secondary-bg);
+  color: var(--button-secondary-text);
+  border-color: var(--button-secondary-border);
 }
 
 .button--outline:hover:not(:disabled) {
-  background: #ffffff;
+  background: var(--button-secondary-hover-bg);
   color: var(--primary);
   border-color: var(--primary);
   transform: translateY(-1.5px);

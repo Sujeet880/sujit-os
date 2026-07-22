@@ -9,6 +9,7 @@ import { useActiveSection } from "@/hooks/use-active-section";
 
 import { NavbarItem } from "./navbar-item";
 import { MobileMenu } from "./mobile-menu";
+import { ThemeToggle } from "./theme-toggle";
 
 import "./navbar.css";
 
@@ -76,8 +77,9 @@ export const Navbar = forwardRef<HTMLElement, NavbarProps>(
               active={activeSection === "contact"}
             />
           </nav>
-
+ 
           <div className="navbar__right">
+            <ThemeToggle />
             <Link href="mailto:ktsujeet1997@gmail.com">
               <Button className="navbar__cta">
                 <span className="navbar__cta-dot" />
@@ -85,9 +87,10 @@ export const Navbar = forwardRef<HTMLElement, NavbarProps>(
               </Button>
             </Link>
           </div>
-
+ 
           {/* Mobile */}
           <div className="navbar__mobile-toggle">
+            <ThemeToggle />
             <MobileMenu />
           </div>
         </div>

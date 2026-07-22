@@ -27,22 +27,22 @@
 .case-study-hero__breadcrumb-link {
   font-size: 0.8125rem;
   font-weight: 500;
-  color: #6b7280;
+  color: var(--foreground-subtle);
   transition: color 220ms ease;
 }
-
+ 
 .case-study-hero__breadcrumb-link:hover {
-  color: #111111;
+  color: var(--foreground);
 }
-
+ 
 .case-study-hero__breadcrumb-separator {
-  color: #d1d5db;
+  color: var(--border);
 }
-
+ 
 .case-study-hero__breadcrumb-current {
   font-size: 0.8125rem;
   font-weight: 500;
-  color: #111111;
+  color: var(--foreground);
 }
 
 /* Project Category */
@@ -52,27 +52,27 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: #fc8019; /* System orange badge color */
+  color: var(--primary); /* System orange badge color */
   margin-bottom: 16px;
 }
-
+ 
 /* Project Title */
 .case-study-hero__title {
   font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: 800;
   line-height: 1.05;
   letter-spacing: -0.04em;
-  color: #111111;
+  color: var(--foreground);
   margin: 0 0 16px 0;
 }
-
+ 
 /* Subtitle */
 .case-study-hero__subtitle {
   font-size: clamp(1.25rem, 3vw, 1.5rem);
   font-weight: 600;
   line-height: 1.4;
   letter-spacing: -0.02em;
-  color: #374151;
+  color: var(--foreground-muted);
   margin: 0 0 28px 0;
 }
 
@@ -87,7 +87,7 @@
 .case-study-hero__description p {
   font-size: 1.0625rem;
   line-height: 1.65;
-  color: #4b5563;
+  color: var(--foreground-muted);
   margin: 0;
 }
 
@@ -97,8 +97,8 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
   padding-block: 40px;
-  border-top: 1px solid rgba(17, 17, 17, 0.08);
-  border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
   margin-bottom: 48px;
 }
 
@@ -113,7 +113,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: #9ca3af;
+  color: var(--foreground-subtle);
 }
 
 .case-study-hero__meta-values {
@@ -128,7 +128,7 @@
 .case-study-hero__meta-value {
   font-size: 0.9375rem;
   font-weight: 600;
-  color: #111111;
+  color: var(--foreground);
   line-height: 1.4;
 }
 
@@ -146,12 +146,15 @@
 }
 
 .case-study-hero__btn--primary {
-  background: #111111;
-  color: #ffffff;
+  background: var(--foreground);
+  color: var(--background);
+  border-color: var(--foreground);
 }
-
+ 
 .case-study-hero__btn--primary:hover {
-  background: #222222;
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
 }
 
 /* Hero Responsive Image Wrapper */

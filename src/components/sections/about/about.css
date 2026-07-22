@@ -37,8 +37,8 @@
   border-radius: 16px;
   /* consistent border radius */
   padding: 0.5rem;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.04);
+  background: var(--surface);
+  border: 1px solid var(--border);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
   /* subtle shadow */
   z-index: 2;
@@ -55,8 +55,8 @@
   height: 100%;
   border-radius: 12px;
   overflow: hidden;
-  background: #fcfcfa;
-  border: 1px solid rgba(0, 0, 0, 0.02);
+  background: var(--background);
+  border: 1px solid var(--border-muted);
 }
 
 .about__canvas-img {
@@ -98,7 +98,7 @@
   /* Increase whitespace around quote */
   padding-left: 20px;
   /* Whitespace on left */
-  border-left: 3px solid #fc8019;
+  border-left: 3px solid var(--primary);
   /* Subtle Swiggy Orange accent line */
   gap: 8px;
 }
@@ -108,15 +108,15 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #9ca3af;
+  color: var(--foreground-subtle);
   margin: 0;
 }
-
+ 
 .about__paragraph {
   font-size: 1.05rem;
   line-height: 1.65;
   /* Improved line height */
-  color: #4b5563;
+  color: var(--foreground-muted);
   margin: 0;
   max-width: 680px;
   /* Readability maximum width */
@@ -126,7 +126,7 @@
   font-size: 1.15rem;
   /* Visual highlight typography */
   line-height: 1.6;
-  color: #111111;
+  color: var(--foreground);
   /* Dark contrast */
   font-style: italic;
   /* Elegant italic styling */
@@ -148,9 +148,9 @@
   gap: 1rem;
   padding: 28px;
   /* consistent internal padding */
-  background: #ffffff;
+  background: var(--surface);
   /* soft background */
-  border: 1px solid rgba(17, 17, 17, 0.06);
+  border: 1px solid var(--border);
   /* 1px subtle neutral border */
   border-radius: 18px;
   /* 18px border radius */
@@ -173,7 +173,7 @@
 .about__value-card:hover {
   transform: translateY(-4px);
   /* translateY(-4px) hover lift */
-  border-color: rgba(17, 17, 17, 0.12);
+  border-color: var(--card-border-hover);
   /* border slightly stronger */
   box-shadow:
     0 4px 6px rgba(0, 0, 0, 0.01),
@@ -189,9 +189,9 @@
   height: 36px;
   border-radius: 8px;
   /* Squircle icon block matching How I Think */
-  background: rgba(252, 128, 25, 0.06);
-  border: 1px solid rgba(252, 128, 25, 0.15);
-  color: #fc8019;
+  background: var(--primary-light);
+  border: 1px solid rgba(252, 128, 25, 0.25);
+  color: var(--primary);
   /* subtle orange accent */
   flex-shrink: 0;
 }
@@ -199,14 +199,14 @@
 .about__value-title {
   font-size: 1rem;
   font-weight: 700;
-  color: #111111;
+  color: var(--foreground);
   margin: 0 0 0.25rem 0;
 }
 
 .about__value-text {
   font-size: 0.875rem;
   line-height: 1.5;
-  color: #6b7280;
+  color: var(--foreground-muted);
   margin: 0;
 }
 
@@ -228,26 +228,26 @@
   /* padding horizontal 16px */
   font-size: 0.8125rem;
   font-weight: 600;
-  color: #4b5563;
-  background: #f3f4f6;
+  color: var(--foreground-muted);
+  background: var(--surface-secondary);
   border-radius: 999px;
   /* rounded pill */
-  border: 1px solid rgba(0, 0, 0, 0.04);
+  border: 1px solid var(--border);
   /* subtle border */
   transition: all 200ms ease;
 }
 
 .about__skill-pill:hover {
-  background: rgba(252, 128, 25, 0.05);
+  background: var(--primary-light);
   /* very subtle orange tint hover */
-  border-color: rgba(252, 128, 25, 0.15);
-  color: #fc8019;
+  border-color: rgba(252, 128, 25, 0.25);
+  color: var(--primary);
 }
 
 .about__value-card:focus-visible,
 .about__skill-pill:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #fc8019;
+  box-shadow: 0 0 0 2px var(--surface), 0 0 0 4px var(--primary);
 }
 
 /* Accessibility / Reduced Motion */
