@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 import { Navbar } from "@/components/layout/navbar";
 import { ThemeProvider } from "@/components/common/theme-provider";
@@ -94,6 +95,9 @@ export default function RootLayout({
 
           <main>{children}</main>
         </ThemeProvider>
+        <GoogleAnalytics
+          gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID!}
+        />
       </body>
     </html>
   );
