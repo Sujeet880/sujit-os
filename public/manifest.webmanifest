@@ -1,0 +1,16 @@
+{
+  "name": "Sujit Kumar Portfolio",
+  "short_name": "Sujit Kumar",
+  "description": "Sujit Kumar | Senior Product Designer Portfolio",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#fc8019",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "52x48",
+      "type": "image/png"
+    }
+  ]
+}

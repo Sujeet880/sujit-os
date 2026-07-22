@@ -14,7 +14,32 @@ import {
 
 export const metadata: Metadata = {
   title: "Mirari Surface — Designing a Smart Home Control Experience",
-  description: "Flagship case study on designing a smart home control experience for Mirari Surface.",
+  description: "Flagship case study on designing a smart home control experience for Mirari Surface touch screens and companion mobile apps.",
+  alternates: {
+    canonical: "/work/mirari-surface",
+  },
+  openGraph: {
+    title: "Mirari Surface — Designing a Smart Home Control Experience",
+    description: "Flagship case study on designing a smart home control experience for Mirari Surface touch screens and companion mobile apps.",
+    url: "https://sujitkumar.design/work/mirari-surface",
+    siteName: "Sujit Kumar Portfolio",
+    locale: "en_US",
+    type: "article",
+    images: [
+      {
+        url: "/hotel_platform.png",
+        width: 1200,
+        height: 630,
+        alt: "Mirari Surface - Smart Switchboard Control Experience",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mirari Surface — Designing a Smart Home Control Experience",
+    description: "Flagship case study on designing a smart home control experience for Mirari Surface touch screens and companion mobile apps.",
+    images: ["/hotel_platform.png"],
+  },
 };
 
 const sections = [

@@ -17,8 +17,44 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sujit Kumar | Product Designer",
-  description: "Portfolio of Sujit Kumar",
+  metadataBase: new URL("https://sujitkumar.design"),
+  title: "Sujit Kumar | Senior Product Designer",
+  description: "Product Designer specializing in Enterprise SaaS, UX Strategy, Systems Thinking, Design Systems, IoT, and Embedded Interfaces.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Sujit Kumar | Senior Product Designer",
+    description: "Product Designer specializing in Enterprise SaaS, UX Strategy, Systems Thinking, Design Systems, IoT, and Embedded Interfaces.",
+    url: "https://sujitkumar.design",
+    siteName: "Sujit Kumar Portfolio",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Sujit Kumar - Senior Product Designer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sujit Kumar | Senior Product Designer",
+    description: "Product Designer specializing in Enterprise SaaS, UX Strategy, Systems Thinking, Design Systems, IoT, and Embedded Interfaces.",
+    images: ["/opengraph-image.png"],
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", type: "image/png" },
+    ],
+  },
+  manifest: "/manifest.webmanifest",
 };
 
 export default function RootLayout({

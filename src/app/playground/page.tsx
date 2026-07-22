@@ -1,7 +1,16 @@
+import type { Metadata } from "next";
 import { ArrowRight, Plus } from "lucide-react";
-
+ 
 import { Button } from "@/components/ui/button";
-
+ 
+export const metadata: Metadata = {
+  title: "Playground — Sujit Kumar Design",
+  description: "Playground page to test design system components.",
+  alternates: {
+    canonical: "/playground",
+  },
+};
+ 
 export default function PlaygroundPage() {
   return (
     <main
