@@ -26,6 +26,7 @@ interface CaseStudyHeroProps {
   secondaryTargetId: string;
   imageLabel: string;
   imageCaption: string;
+  imageSrc?: string;
   primaryCtaLabel?: string;
   secondaryCtaLabel?: string;
 }
@@ -41,6 +42,7 @@ export function CaseStudyHero({
   secondaryTargetId,
   imageLabel,
   imageCaption,
+  imageSrc,
   primaryCtaLabel = "View Final Designs",
   secondaryCtaLabel = "Read Process",
 }: CaseStudyHeroProps) {
@@ -191,6 +193,7 @@ export function CaseStudyHero({
             <CaseStudyImage 
               label={imageLabel} 
               caption={imageCaption} 
+              src={imageSrc}
               wide 
               aspectRatio="16-9" 
             />

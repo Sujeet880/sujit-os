@@ -110,6 +110,7 @@ export default function MirariSurfaceCaseStudy() {
         secondaryTargetId="context"
         imageLabel="Mirari Surface Hero Image"
         imageCaption="Mirari Surface connects embedded hardware and mobile experiences into one unified smart home ecosystem."
+        imageSrc="/images/mirari/hero.jpg"
       />
 
       {/* 02 Why This Product Exists */}
@@ -144,6 +145,7 @@ export default function MirariSurfaceCaseStudy() {
 
         <CaseStudyImage
           label="Traditional Switchboard → Mirari Surface"
+          src="/images/mirari/traditional-to-smart.jpg"
           caption="Reimagining a familiar interaction instead of replacing it."
           wide
           aspectRatio="16-9"
@@ -198,6 +200,7 @@ export default function MirariSurfaceCaseStudy() {
 
         <CaseStudyImage
           label="Design Challenge Diagram"
+          src="/images/mirari/design-challenge.jpg"
           wide
           aspectRatio="16-9"
         />
@@ -320,6 +323,7 @@ export default function MirariSurfaceCaseStudy() {
 
         <CaseStudyImage
           label="Engineering Constraints Diagram"
+          src="/images/mirari/engineering.jpg"
           caption="Balancing usability, performance and implementation across embedded hardware."
           wide
           aspectRatio="16-9"
@@ -386,6 +390,7 @@ export default function MirariSurfaceCaseStudy() {
 
         <CaseStudyImage
           label="Research Notes"
+          src="/images/mirari/research-board.jpg"
           caption="Design decisions were driven by existing behaviour rather than assumptions."
           wide
         />
@@ -435,6 +440,13 @@ export default function MirariSurfaceCaseStudy() {
             <p className="case-study-principles__card-text">Design decisions should be validated with engineering throughout the project instead of during handoff.</p>
           </div>
         </div>
+
+        <CaseStudyImage
+          label="Interaction Principles Framework"
+          src="/images/mirari/interaction-principles.jpg"
+          wide
+          aspectRatio="16-9"
+        />
 
         <div className="case-study-section__callout" style={{ marginTop: "32px" }}>
           <p className="case-study-section__callout-text" style={{ fontStyle: "normal" }}>
@@ -514,6 +526,7 @@ export default function MirariSurfaceCaseStudy() {
 
         <CaseStudyImage
           label="Information Architecture"
+          src="/images/mirari/information-architecture.jpg"
           caption="High-level product architecture showing how users navigate between core smart home experiences."
           wide
         />
@@ -544,6 +557,7 @@ export default function MirariSurfaceCaseStudy() {
 
         <CaseStudyImage
           label="User Flow"
+          src="/images/mirari/user-flow.jpg"
           caption="User flow flowcharts mapping lighting scenes setup, guest mode activation, and system configuration."
           wide
         />
@@ -579,7 +593,7 @@ export default function MirariSurfaceCaseStudy() {
           {/* Concept A */}
           <div className="case-study-exploration__step" style={{ border: "1px solid rgba(17, 17, 17, 0.06)", borderRadius: "18px", padding: "28px" }}>
             <h4 style={{ fontSize: "1.125rem", fontWeight: 700, color: "#111111", marginBottom: "16px" }}>Concept A: Ultra-Minimal Widgets</h4>
-            <CaseStudyImage label="Concept A Layout" aspectRatio="16-9" />
+            <CaseStudyImage label="Concept A Layout" src="/images/mirari/wireframes.jpg" aspectRatio="16-9" />
             <p style={{ marginTop: "16px", fontSize: "0.9375rem", color: "#4b5563" }}>
               <strong>Rationale:</strong> Explored a clean dashboard with massive buttons for light and fan controls.
             </p>
@@ -591,7 +605,7 @@ export default function MirariSurfaceCaseStudy() {
           {/* Concept B */}
           <div className="case-study-exploration__step" style={{ border: "1px solid rgba(17, 17, 17, 0.06)", borderRadius: "18px", padding: "28px" }}>
             <h4 style={{ fontSize: "1.125rem", fontWeight: 700, color: "#111111", marginBottom: "16px" }}>Concept B: Nested Rooms Layout</h4>
-            <CaseStudyImage label="Concept B Layout" aspectRatio="16-9" />
+            <CaseStudyImage label="Concept B Layout" src="/images/mirari/wireframes.jpg" aspectRatio="16-9" />
             <p style={{ marginTop: "16px", fontSize: "0.9375rem", color: "#4b5563" }}>
               <strong>Rationale:</strong> Organized devices strictly by room categories (Living Room, Kitchen).
             </p>
@@ -603,7 +617,7 @@ export default function MirariSurfaceCaseStudy() {
           {/* Concept C */}
           <div className="case-study-exploration__step" style={{ border: "1px solid rgba(17, 17, 17, 0.06)", borderRadius: "18px", padding: "28px" }}>
             <h4 style={{ fontSize: "1.125rem", fontWeight: 700, color: "#111111", marginBottom: "16px" }}>Concept C: Swipeable Room Cards</h4>
-            <CaseStudyImage label="Concept C Layout" aspectRatio="16-9" />
+            <CaseStudyImage label="Concept C Layout" src="/images/mirari/wireframes.jpg" aspectRatio="16-9" />
             <p style={{ marginTop: "16px", fontSize: "0.9375rem", color: "#4b5563" }}>
               <strong>Rationale:</strong> Introduced horizontal swipe gestures to switch between rooms instantly.
             </p>
@@ -615,7 +629,7 @@ export default function MirariSurfaceCaseStudy() {
           {/* Final Direction */}
           <div className="case-study-exploration__step" style={{ border: "1px solid rgba(17, 17, 17, 0.06)", borderRadius: "18px", padding: "28px", background: "#FFF9F4" }}>
             <h4 style={{ fontSize: "1.125rem", fontWeight: 700, color: "#111111", marginBottom: "16px" }}>Final Direction: Dynamic Split Panel</h4>
-            <CaseStudyImage label="Final Direction Layout" aspectRatio="16-9" />
+            <CaseStudyImage label="Final Direction Layout" src="/images/mirari/high-fidelity-ui.jpg" aspectRatio="16-9" />
             <p style={{ marginTop: "16px", fontSize: "0.9375rem", color: "#4b5563" }}>
               <strong>Rationale:</strong> A static, high-contrast dashboard with instant one-tap control widgets on one half, and contextual rooms on the other.
             </p>
@@ -700,7 +714,7 @@ export default function MirariSurfaceCaseStudy() {
         <div className="case-study-embedded__gallery" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "32px", marginTop: "40px" }}>
           <div className="case-study-embedded__item" style={{ border: "1px solid rgba(17, 17, 17, 0.06)", borderRadius: "18px", padding: "24px" }}>
             <h4 style={{ fontSize: "1.0625rem", fontWeight: 700, color: "#111111", marginBottom: "8px" }}>Home Dashboard</h4>
-            <CaseStudyImage label="Dashboard Screen" aspectRatio="16-9" />
+            <CaseStudyImage label="Dashboard Screen" src="/images/mirari/hero.jpg" aspectRatio="16-9" />
             <p style={{ marginTop: "12px", fontSize: "0.875rem", color: "#4b5563", marginInline: 0 }}>
               <strong>Explanation:</strong> The default idle screen surfacing the current time, outdoor temperature, and active scene status.
             </p>
@@ -710,7 +724,7 @@ export default function MirariSurfaceCaseStudy() {
           </div>
           <div className="case-study-embedded__item" style={{ border: "1px solid rgba(17, 17, 17, 0.06)", borderRadius: "18px", padding: "24px" }}>
             <h4 style={{ fontSize: "1.0625rem", fontWeight: 700, color: "#111111", marginBottom: "8px" }}>Quick Controls Panel</h4>
-            <CaseStudyImage label="Quick Controls Screen" aspectRatio="16-9" />
+            <CaseStudyImage label="Quick Controls Screen" src="/images/mirari/high-fidelity-ui.jpg" aspectRatio="16-9" />
             <p style={{ marginTop: "12px", fontSize: "0.875rem", color: "#4b5563", marginInline: 0 }}>
               <strong>Explanation:</strong> Direct toggle access for lights, fan speeds, and security shortcuts.
             </p>
@@ -747,14 +761,14 @@ export default function MirariSurfaceCaseStudy() {
         <div className="case-study-mobile__groups" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "32px", marginTop: "40px" }}>
           <div style={{ border: "1px solid rgba(17, 17, 17, 0.06)", borderRadius: "18px", padding: "24px" }}>
             <h4 style={{ fontSize: "1.0625rem", fontWeight: 700, color: "#111111", marginBottom: "12px" }}>Device Setup & Provisioning</h4>
-            <CaseStudyImage label="Mobile Setup Screen" aspectRatio="auto" />
+            <CaseStudyImage label="Mobile Setup Screen" src="/images/mirari/high-fidelity-ui.jpg" aspectRatio="auto" />
             <p style={{ marginTop: "12px", fontSize: "0.9375rem", color: "#4b5563", marginInline: 0 }}>
               Simplifies adding new smart bulbs, switches, or thermostats to rooms using QR code scanning and direct Wi-Fi configuration.
             </p>
           </div>
           <div style={{ border: "1px solid rgba(17, 17, 17, 0.06)", borderRadius: "18px", padding: "24px" }}>
             <h4 style={{ fontSize: "1.0625rem", fontWeight: 700, color: "#111111", marginBottom: "12px" }}>Automations & Scenes Editor</h4>
-            <CaseStudyImage label="Mobile Automation Screen" aspectRatio="auto" />
+            <CaseStudyImage label="Mobile Automation Screen" src="/images/mirari/high-fidelity-ui.jpg" aspectRatio="auto" />
             <p style={{ marginTop: "12px", fontSize: "0.9375rem", color: "#4b5563", marginInline: 0 }}>
               Allows users to chain device triggers together based on schedules, occupancy sensors, or sunrise/sunset timestamps.
             </p>
@@ -792,6 +806,13 @@ export default function MirariSurfaceCaseStudy() {
             </span>
           ))}
         </div>
+
+        <CaseStudyImage
+          label="Design System Board"
+          src="/images/mirari/design-system.jpg"
+          wide
+          aspectRatio="16-9"
+        />
 
         <div className="case-study-section__callout" style={{ marginTop: "32px" }}>
           <p className="case-study-section__callout-text">
@@ -869,6 +890,13 @@ export default function MirariSurfaceCaseStudy() {
           ))}
         </div>
 
+        <CaseStudyImage
+          label="Engineering Collaboration Board"
+          src="/images/mirari/engineering.jpg"
+          wide
+          aspectRatio="16-9"
+        />
+
         <div className="case-study-section__callout" style={{ marginTop: "32px" }}>
           <p className="case-study-section__callout-text">
             Collaboration transformed technical constraints into better product decisions.
@@ -884,9 +912,9 @@ export default function MirariSurfaceCaseStudy() {
         introduction="The result was a connected smart home experience designed around familiarity, performance and simplicity."
       >
         <div style={{ display: "flex", flexDirection: "column", gap: "32px" }}>
-          <CaseStudyImage label="Embedded Screens Showcase" wide />
-          <CaseStudyImage label="Mobile Screens Showcase" wide />
-          <CaseStudyImage label="Interactive Prototypes" wide />
+          <CaseStudyImage label="Embedded Screens Showcase" src="/images/mirari/hero.jpg" wide />
+          <CaseStudyImage label="Mobile Screens Showcase" src="/images/mirari/high-fidelity-ui.jpg" wide />
+          <CaseStudyImage label="Interactive Prototypes" src="/images/mirari/ecosystem.jpg" wide />
         </div>
 
         <div className="case-study-section__callout" style={{ marginTop: "32px" }}>

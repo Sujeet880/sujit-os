@@ -53,6 +53,11 @@
   pointer-events: none;
 }
 
+.case-study-image--has-image::before {
+  content: none;
+}
+
+
 /* Caption below image */
 .case-study-image-wrapper {
   display: flex;

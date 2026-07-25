@@ -1,9 +1,11 @@
+import Image from "next/image";
 import { cn } from "@/lib/cn";
 
 import "./case-study-image.css";
 
 interface CaseStudyImageProps {
   label: string;
+  src?: string;
   aspectRatio?: "16-9" | "4-3" | "3-2" | "1-1" | "auto";
   caption?: string;
   wide?: boolean;
@@ -12,6 +14,7 @@ interface CaseStudyImageProps {
 
 export function CaseStudyImage({
   label,
+  src,
   aspectRatio = "16-9",
   caption,
   wide = false,
@@ -22,10 +25,23 @@ export function CaseStudyImage({
       className={cn(
         "case-study-image",
         `case-study-image--${aspectRatio}`,
+        src && "case-study-image--has-image",
         className
       )}
     >
-      <span className="case-study-image__label">{label}</span>
+      {src ? (
+        <Image
+          src={src}
+          alt={label}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+          className="case-study-image__img"
+          style={{ objectFit: aspectRatio === "auto" ? "contain" : "cover" }}
+          priority={label.toLowerCase().includes("hero")}
+        />
+      ) : (
+        <span className="case-study-image__label">{label}</span>
+      )}
     </div>
   );
 
@@ -44,3 +60,4 @@ export function CaseStudyImage({
     </div>
   );
 }
+

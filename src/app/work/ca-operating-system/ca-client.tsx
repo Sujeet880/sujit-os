@@ -11,6 +11,24 @@ import {
   CaseStudySection,
   CaseStudyImage,
 } from "@/components/case-study";
+import {
+  UnifiedOperatingSystem,
+  ScalabilityFramework,
+  ProductInformationArchitecture,
+  ProductNavigationFramework,
+  CrossModuleUserFlow,
+  SingleSourceOfTruth,
+  ExecutiveDashboard,
+  ClientWorkspace,
+  ComplianceWorkspace,
+  TaskWorkflowManagement,
+  ReportsAnalytics,
+  EnterpriseDesignSystem,
+  EngineeringCollaboration,
+  ProductImpactOutcomes,
+  FutureProductRoadmap,
+  FinalProductPrinciples
+} from "./ca-diagrams";
 
 const navItems = [
   { id: "overview", label: "Overview" },
@@ -67,7 +85,7 @@ export function CaOperatingSystemCaseStudyClient() {
   const [scrollPercent, setScrollPercent] = useState(0);
   const [activeNav, setActiveNav] = useState("overview");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [lightboxImage, setLightboxImage] = useState<{ src: string; caption: string } | null>(null);
+  const [lightboxContent, setLightboxContent] = useState<{ type: "image"; src: string; caption: string } | { type: "component"; element: React.ReactNode; caption: string } | null>(null);
 
   // Scroll Progress Tracker
   useEffect(() => {
@@ -107,13 +125,13 @@ export function CaOperatingSystemCaseStudyClient() {
 
   // Keyboard navigation for lightbox overlay
   useEffect(() => {
-    if (!lightboxImage) return;
+    if (!lightboxContent) return;
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setLightboxImage(null);
+      if (e.key === "Escape") setLightboxContent(null);
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [lightboxImage]);
+  }, [lightboxContent]);
 
   return (
     <>
@@ -374,13 +392,15 @@ export function CaOperatingSystemCaseStudyClient() {
         <div 
           className="case-study-section__wide" 
           style={{ marginTop: "24px", cursor: "zoom-in" }}
-          onClick={() => setLightboxImage({
-            src: "/doctor_platform.png",
+          onClick={() => setLightboxContent({
+            type: "image",
+            src: "/images/ca-operating-system/workflow_discovery_diagram.png",
             caption: "Workflow Discovery Diagram mapping the complex operational dependencies within accounting firms.",
           })}
         >
           <CaseStudyImage
             label="Workflow Discovery Diagram"
+            src="/images/ca-operating-system/workflow_discovery_diagram.png"
             caption="Workflow Discovery Diagram mapping the complex operational dependencies within accounting firms."
           />
         </div>
@@ -414,6 +434,22 @@ export function CaOperatingSystemCaseStudyClient() {
         <p>
           The more workflows I mapped, the clearer the operational complexity became.
         </p>
+
+        <div 
+          className="case-study-section__wide" 
+          style={{ marginTop: "32px", cursor: "zoom-in" }}
+          onClick={() => setLightboxContent({
+            type: "image",
+            src: "/images/ca-operating-system/business_research_board.png",
+            caption: "Business Research Board visualizing findings from stakeholder workshops.",
+          })}
+        >
+          <CaseStudyImage
+            label="Business Research Board"
+            src="/images/ca-operating-system/business_research_board.png"
+            caption="Business Research Board visualizing findings from stakeholder workshops."
+          />
+        </div>
       </CaseStudySection>
 
       {/* 04 Research Insights */}
@@ -458,6 +494,22 @@ export function CaOperatingSystemCaseStudyClient() {
             </p>
           </div>
         </div>
+
+        <div 
+          className="case-study-section__wide" 
+          style={{ marginTop: "32px", cursor: "zoom-in" }}
+          onClick={() => setLightboxContent({
+            type: "image",
+            src: "/images/ca-operating-system/key_research_insights.png",
+            caption: "Key Research Insights summarizing the five main friction points.",
+          })}
+        >
+          <CaseStudyImage
+            label="Key Research Insights"
+            src="/images/ca-operating-system/key_research_insights.png"
+            caption="Key Research Insights summarizing the five main friction points."
+          />
+        </div>
       </CaseStudySection>
 
       {/* 05 The Pattern I Couldn't Ignore */}
@@ -479,13 +531,15 @@ export function CaOperatingSystemCaseStudyClient() {
         <div 
           className="case-study-section__wide" 
           style={{ marginTop: "24px", cursor: "zoom-in" }}
-          onClick={() => setLightboxImage({
-            src: "/hotel_platform.png",
+          onClick={() => setLightboxContent({
+            type: "image",
+            src: "/images/ca-operating-system/systems_fragmentation_diagram.png",
             caption: "Systems Fragmentation Diagram demonstrating the flow of data across disconnected applications.",
           })}
         >
           <CaseStudyImage
             label="Systems Fragmentation Diagram"
+            src="/images/ca-operating-system/systems_fragmentation_diagram.png"
             caption="Diagram showing the fragmented manual transfer of client data across disconnected SaaS tools."
           />
         </div>
@@ -569,6 +623,18 @@ export function CaOperatingSystemCaseStudyClient() {
             </p>
           </div>
         </div>
+
+        <div 
+          className="case-study-section__wide" 
+          style={{ marginTop: "32px", cursor: "zoom-in" }}
+          onClick={() => setLightboxContent({
+            type: "component",
+            element: <UnifiedOperatingSystem />,
+            caption: "Unified Operating System Model comparing traditional and unified operations.",
+          })}
+        >
+          <UnifiedOperatingSystem />
+        </div>
       </CaseStudySection>
 
       {/* 09 Systems Thinking */}
@@ -593,14 +659,32 @@ export function CaOperatingSystemCaseStudyClient() {
         <div 
           className="case-study-section__wide" 
           style={{ marginTop: "24px", cursor: "zoom-in" }}
-          onClick={() => setLightboxImage({
-            src: "/digital_banking.png",
+          onClick={() => setLightboxContent({
+            type: "image",
+            src: "/images/ca-operating-system/connected_business_ecosystem.png",
             caption: "Ecosystem Diagram showing interactions across billing, compliance, CRM, and files.",
           })}
         >
           <CaseStudyImage
             label="Ecosystem Diagram"
+            src="/images/ca-operating-system/connected_business_ecosystem.png"
             caption="Ecosystem Diagram demonstrating the flow of automated actions and status triggers across leads, client onboarding, compliance, and billing."
+          />
+        </div>
+
+        <div 
+          className="case-study-section__wide" 
+          style={{ marginTop: "32px", cursor: "zoom-in" }}
+          onClick={() => setLightboxContent({
+            type: "image",
+            src: "/images/ca-operating-system/product_vision_framework.png",
+            caption: "Product Vision Framework defining the operational layer principles.",
+          })}
+        >
+          <CaseStudyImage
+            label="Product Vision Framework"
+            src="/images/ca-operating-system/product_vision_framework.png"
+            caption="Product Vision Framework defining the operational layer principles."
           />
         </div>
       </CaseStudySection>
@@ -685,11 +769,16 @@ export function CaOperatingSystemCaseStudyClient() {
         <p>{"Scalability wasn't treated as a technical requirement."}</p>
         <p>It became a product design principle.</p>
 
-        <div className="case-study-section__wide" style={{ marginTop: "24px" }}>
-          <CaseStudyImage
-            label="Scalability Flow Illustration"
-            caption="Visual schema showing structural transition from small boutique accounting firms to high-volume enterprise organizations."
-          />
+        <div 
+          className="case-study-section__wide" 
+          style={{ marginTop: "24px", cursor: "zoom-in" }}
+          onClick={() => setLightboxContent({
+            type: "component",
+            element: <ScalabilityFramework />,
+            caption: "System Scalability Framework showing operational scaling levels.",
+          })}
+        >
+          <ScalabilityFramework />
         </div>
       </CaseStudySection>
 
@@ -778,16 +867,13 @@ export function CaOperatingSystemCaseStudyClient() {
         <div 
           className="case-study-section__wide" 
           style={{ marginTop: "24px", cursor: "zoom-in" }}
-          onClick={() => setLightboxImage({
-            src: "/doctor_platform.png",
-            caption: "Information Architecture Diagram of CA Operating System.",
+          onClick={() => setLightboxContent({
+            type: "component",
+            element: <ProductInformationArchitecture />,
+            caption: "Product Information Architecture mapping primary modules to child views.",
           })}
         >
-          <CaseStudyImage
-            label="Information Architecture Diagram"
-            caption="Information Architecture mapping: Dashboard leading to Leads, Clients, Services, Documents, Payments, Compliance, Notifications, and Reports."
-            wide
-          />
+          <ProductInformationArchitecture />
         </div>
       </CaseStudySection>
 
@@ -817,15 +903,13 @@ export function CaOperatingSystemCaseStudyClient() {
         <div 
           className="case-study-section__wide" 
           style={{ marginTop: "24px", cursor: "zoom-in" }}
-          onClick={() => setLightboxImage({
-            src: "/hotel_platform.png",
-            caption: "Product Ecosystem Diagram mapping data connections across compliance, CRM, and files.",
+          onClick={() => setLightboxContent({
+            type: "component",
+            element: <CrossModuleUserFlow />,
+            caption: "Cross-Module User Journey mapping client lifecycle from lead to monthly reports.",
           })}
         >
-          <CaseStudyImage
-            label="Product Ecosystem Diagram"
-            caption="Interconnected modules displaying relational data flows between CRM, Compliance, Document Vault, Billing, and Team Tasks."
-          />
+          <CrossModuleUserFlow />
         </div>
       </CaseStudySection>
 
@@ -890,62 +974,16 @@ export function CaOperatingSystemCaseStudyClient() {
         </p>
         <p>The client becomes the center of the ecosystem. Everything connects back to it.</p>
 
-        <div className="case-study-section__wide" style={{ display: "flex", justifyContent: "center", marginBlock: "32px" }}>
-          <div style={{
-            border: "1px solid var(--border)",
-            borderRadius: "24px",
-            background: "var(--surface)",
-            padding: "40px",
-            maxWidth: "600px",
-            width: "100%",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: "24px",
-            boxShadow: "0 1px 2px rgba(0, 0, 0, 0.01), 0 8px 24px -12px rgba(0, 0, 0, 0.03)",
-          }}>
-            {/* Central Node */}
-            <div style={{
-              background: "var(--primary-light)",
-              border: "2px solid var(--primary)",
-              color: "var(--primary)",
-              padding: "16px 32px",
-              borderRadius: "50px",
-              fontWeight: "700",
-              fontSize: "1.25rem",
-              boxShadow: "0 0 0 4px var(--selection-background)",
-            }}>
-              Client (Center Node)
-            </div>
-            
-            {/* Connected nodes grid */}
-            <div style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(3, 1fr)",
-              gap: "12px",
-              width: "100%",
-              marginTop: "12px",
-            }}>
-              {[
-                "Documents", "Payments", "Services",
-                "Compliance", "Timeline", "Notes",
-                "Tasks", "Communication", "Notifications",
-              ].map((node) => (
-                <div key={node} style={{
-                  background: "var(--surface-secondary)",
-                  border: "1px solid var(--border)",
-                  padding: "12px",
-                  borderRadius: "12px",
-                  textAlign: "center",
-                  fontSize: "0.875rem",
-                  fontWeight: "600",
-                  color: "var(--foreground-muted)",
-                }}>
-                  {node}
-                </div>
-              ))}
-            </div>
-          </div>
+        <div 
+          className="case-study-section__wide" 
+          style={{ marginTop: "24px", cursor: "zoom-in" }}
+          onClick={() => setLightboxContent({
+            type: "component",
+            element: <SingleSourceOfTruth />,
+            caption: "Unified Client Record radiating connections as single source of truth.",
+          })}
+        >
+          <SingleSourceOfTruth />
         </div>
 
         <p>This approach simplifies navigation, improves consistency, and reduces operational errors.</p>
@@ -968,11 +1006,16 @@ export function CaOperatingSystemCaseStudyClient() {
         </ul>
         <p>Good navigation reduces effort before users even begin interacting with the product.</p>
 
-        <div className="case-study-section__wide" style={{ marginTop: "24px" }}>
-          <CaseStudyImage
-            label="Navigation Concept Diagram"
-            caption="Navigation schema showcasing sidebar hierarchy grouped by task workflows instead of features."
-          />
+        <div 
+          className="case-study-section__wide" 
+          style={{ marginTop: "24px", cursor: "zoom-in" }}
+          onClick={() => setLightboxContent({
+            type: "component",
+            element: <ProductNavigationFramework />,
+            caption: "System Navigation Framework showing Desktop Application Structure.",
+          })}
+        >
+          <ProductNavigationFramework />
         </div>
       </CaseStudySection>
 
@@ -1007,16 +1050,13 @@ export function CaOperatingSystemCaseStudyClient() {
         <div 
           className="case-study-section__wide" 
           style={{ marginTop: "24px", cursor: "zoom-in" }}
-          onClick={() => setLightboxImage({
-            src: "/doctor_platform.png",
-            caption: "Product Overview Mockup showcasing the full application workspace.",
+          onClick={() => setLightboxContent({
+            type: "component",
+            element: <ExecutiveDashboard />,
+            caption: "Executive Dashboard concept for firm-wide operational visibility.",
           })}
         >
-          <CaseStudyImage
-            label="Product Overview Mockup"
-            caption="High-fidelity interface preview showing the CA Operating System SaaS application dashboard and workspaces."
-            wide
-          />
+          <ExecutiveDashboard />
         </div>
       </CaseStudySection>
 
@@ -1038,16 +1078,13 @@ export function CaOperatingSystemCaseStudyClient() {
         <div 
           className="case-study-section__wide" 
           style={{ marginTop: "24px", cursor: "zoom-in" }}
-          onClick={() => setLightboxImage({
-            src: "/hotel_platform.png",
-            caption: "Annotated Dashboard Interface showcasing priorities, files, tasks, and alerts.",
+          onClick={() => setLightboxContent({
+            type: "component",
+            element: <ComplianceWorkspace />,
+            caption: "Compliance Management Workspace tracking statutory filings.",
           })}
         >
-          <CaseStudyImage
-            label="Annotated Dashboard Interface"
-            caption="Full-width dashboard design showing prioritizations for compliance calendars, pending document actions, invoice updates, and team tasks."
-            wide
-          />
+          <ComplianceWorkspace />
         </div>
       </CaseStudySection>
 
@@ -1065,16 +1102,13 @@ export function CaOperatingSystemCaseStudyClient() {
         <div 
           className="case-study-section__wide" 
           style={{ marginTop: "24px", cursor: "zoom-in" }}
-          onClick={() => setLightboxImage({
-            src: "/digital_banking.png",
-            caption: "Client Workspace dashboard with central metadata tabs.",
+          onClick={() => setLightboxContent({
+            type: "component",
+            element: <ClientWorkspace />,
+            caption: "Client Workspace dashboard displaying unified client data.",
           })}
         >
-          <CaseStudyImage
-            label="Client Workspace Workspace Interface"
-            caption="Client Workspace dashboard with central metadata tabs for Documents, Compliance, and Billing history."
-            wide
-          />
+          <ClientWorkspace />
         </div>
       </CaseStudySection>
 
@@ -1090,11 +1124,16 @@ export function CaOperatingSystemCaseStudyClient() {
         </p>
         <p>The product quietly handles routine operations so teams can focus on higher-value work.</p>
 
-        <div className="case-study-section__wide" style={{ marginTop: "24px" }}>
-          <CaseStudyImage
-            label="Automation Settings & Flows"
-            caption="Automation setup displaying service-driven rules and document collection flows."
-          />
+        <div 
+          className="case-study-section__wide" 
+          style={{ marginTop: "24px", cursor: "zoom-in" }}
+          onClick={() => setLightboxContent({
+            type: "component",
+            element: <TaskWorkflowManagement />,
+            caption: "Kanban task board interface layout for operational execution.",
+          })}
+        >
+          <TaskWorkflowManagement />
         </div>
       </CaseStudySection>
 
@@ -1108,11 +1147,16 @@ export function CaOperatingSystemCaseStudyClient() {
         <p>Users can move naturally between related tasks without unnecessary context switching.</p>
         <p>This keeps workflows predictable, efficient, and easy to learn.</p>
 
-        <div className="case-study-section__wide" style={{ marginTop: "24px" }}>
-          <CaseStudyImage
-            label="Sidebar Navigation Interface"
-            caption="High-fidelity layout of the sidebar navigation system tailored around user priority workflows."
-          />
+        <div 
+          className="case-study-section__wide" 
+          style={{ marginTop: "24px", cursor: "zoom-in" }}
+          onClick={() => setLightboxContent({
+            type: "component",
+            element: <ReportsAnalytics />,
+            caption: "Operational Reports & Analytics dashboard for firm business owners.",
+          })}
+        >
+          <ReportsAnalytics />
         </div>
       </CaseStudySection>
 
@@ -1128,12 +1172,16 @@ export function CaOperatingSystemCaseStudyClient() {
         </p>
         <p>This reduced cognitive load, improved usability, and created a scalable foundation for future product growth.</p>
 
-        <div className="case-study-section__wide" style={{ marginTop: "24px" }}>
-          <CaseStudyImage
-            label="Enterprise Design System Specs"
-            caption="Central design system documentation highlighting UI components, grid spacing, input fields, state variants, and color palettes."
-            wide
-          />
+        <div 
+          className="case-study-section__wide" 
+          style={{ marginTop: "24px", cursor: "zoom-in" }}
+          onClick={() => setLightboxContent({
+            type: "component",
+            element: <EnterpriseDesignSystem />,
+            caption: "Figma UI Kit documenting design tokens, typography, and states.",
+          })}
+        >
+          <EnterpriseDesignSystem />
         </div>
       </CaseStudySection>
 
@@ -1191,6 +1239,18 @@ export function CaOperatingSystemCaseStudyClient() {
               </p>
             </div>
           ))}
+        </div>
+
+        <div 
+          className="case-study-section__wide" 
+          style={{ marginTop: "32px", cursor: "zoom-in" }}
+          onClick={() => setLightboxContent({
+            type: "component",
+            element: <ProductImpactOutcomes />,
+            caption: "Product design impact analysis comparing before and after.",
+          })}
+        >
+          <ProductImpactOutcomes />
         </div>
       </CaseStudySection>
 
@@ -1252,6 +1312,18 @@ export function CaOperatingSystemCaseStudyClient() {
           <li>Business analytics.</li>
           <li>Multi-office collaboration.</li>
         </ul>
+
+        <div 
+          className="case-study-section__wide" 
+          style={{ marginBlock: "32px 12px", cursor: "zoom-in" }}
+          onClick={() => setLightboxContent({
+            type: "component",
+            element: <FutureProductRoadmap />,
+            caption: "Future product scalability roadmap milestones.",
+          })}
+        >
+          <FutureProductRoadmap />
+        </div>
       </CaseStudySection>
 
       {/* 36 Working With Engineering */}
@@ -1270,6 +1342,18 @@ export function CaOperatingSystemCaseStudyClient() {
           <li>Design system thinking.</li>
         </ul>
         <p>{"The objective wasn't only designing beautiful interfaces. It was designing something development teams could realistically build and scale."}</p>
+
+        <div 
+          className="case-study-section__wide" 
+          style={{ marginTop: "24px", cursor: "zoom-in" }}
+          onClick={() => setLightboxContent({
+            type: "component",
+            element: <EngineeringCollaboration />,
+            caption: "Engineering Handoff Flow detailing developer integration points.",
+          })}
+        >
+          <EngineeringCollaboration />
+        </div>
       </CaseStudySection>
 
       {/* 37 Accessibility Considerations */}
@@ -1356,6 +1440,18 @@ export function CaOperatingSystemCaseStudyClient() {
             {"\"The best product experiences don't ask users to adapt to software. They adapt software to the way people naturally work.\""}
           </p>
         </div>
+
+        <div 
+          className="case-study-section__wide" 
+          style={{ marginBlock: "40px 32px", cursor: "zoom-in" }}
+          onClick={() => setLightboxContent({
+            type: "component",
+            element: <FinalProductPrinciples />,
+            caption: "Case study concluding design principles.",
+          })}
+        >
+          <FinalProductPrinciples />
+        </div>
       </CaseStudySection>
 
       {/* Next Case Study CTA */}
@@ -1380,10 +1476,10 @@ export function CaOperatingSystemCaseStudyClient() {
         </Container>
       </section>
 
-      {/* Image Lightbox Modal Overlay (Premium Feature) */}
-      {lightboxImage && (
+      {/* Image / Component Lightbox Modal Overlay (Premium Feature) */}
+      {lightboxContent && (
         <div 
-          onClick={() => setLightboxImage(null)}
+          onClick={() => setLightboxContent(null)}
           style={{
             position: "fixed",
             inset: 0,
@@ -1397,22 +1493,38 @@ export function CaOperatingSystemCaseStudyClient() {
             cursor: "zoom-out",
           }}
         >
-          <img 
-            src={lightboxImage.src} 
-            alt={lightboxImage.caption} 
+          <div 
+            onClick={(e) => e.stopPropagation()} 
             style={{ 
               maxWidth: "90%", 
+              width: lightboxContent.type === "component" ? "1000px" : "auto",
               maxHeight: "80vh", 
-              objectFit: "contain",
-              borderRadius: "8px",
+              overflowY: "auto",
+              borderRadius: "12px",
               boxShadow: "0 10px 40px rgba(0,0,0,0.5)",
-            }} 
-          />
+              cursor: "default"
+            }}
+          >
+            {lightboxContent.type === "image" ? (
+              <img 
+                src={lightboxContent.src} 
+                alt={lightboxContent.caption} 
+                style={{ 
+                  width: "100%",
+                  maxHeight: "80vh", 
+                  objectFit: "contain",
+                  borderRadius: "8px"
+                }} 
+              />
+            ) : (
+              lightboxContent.element
+            )}
+          </div>
           <p style={{ color: "#a3a3a3", marginTop: "20px", fontSize: "0.9375rem", textAlign: "center" }}>
-            {lightboxImage.caption}
+            {lightboxContent.caption}
           </p>
           <button 
-            onClick={() => setLightboxImage(null)}
+            onClick={() => setLightboxContent(null)}
             style={{
               position: "absolute",
               top: "24px",
