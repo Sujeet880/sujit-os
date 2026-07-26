@@ -146,14 +146,14 @@
 }
 
 .case-study-hero__btn--primary {
-  background: var(--foreground);
-  color: var(--background);
-  border-color: var(--foreground);
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
 }
  
 .case-study-hero__btn--primary:hover {
-  background: var(--primary);
-  border-color: var(--primary);
+  background: var(--primary-hover);
+  border-color: var(--primary-hover);
   color: #ffffff;
 }
 

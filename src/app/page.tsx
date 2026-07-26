@@ -1,5 +1,6 @@
 import { Hero } from "@/components/sections/hero";
 import { FeaturedWork } from "@/components/sections/featured-work";
+import { DesignVaultSection } from "@/components/sections/design-vault";
 import { ProfessionalJourney } from "@/components/sections/professional-journey";
 import { HowIThink } from "@/components/sections/how-i-think";
 import { ProofOfImpact } from "@/components/sections/proof-of-impact";
@@ -14,6 +15,8 @@ export default function Home() {
       <Hero />
 
       <FeaturedWork />
+
+      <DesignVaultSection />
 
       <ProfessionalJourney />
 

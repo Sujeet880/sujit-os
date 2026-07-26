@@ -4,6 +4,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 
 import { Navbar } from "@/components/layout/navbar";
 import { ThemeProvider } from "@/components/common/theme-provider";
+import { AuthProvider } from "@/context/AuthContext";
 
 import "./globals.css";
 
@@ -91,9 +92,11 @@ export default function RootLayout({
       </head>
       <body className="min-h-full">
         <ThemeProvider>
-          <Navbar />
+          <AuthProvider>
+            <Navbar />
 
-          <main>{children}</main>
+            <main>{children}</main>
+          </AuthProvider>
         </ThemeProvider>
         <GoogleAnalytics
           gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID!}

@@ -5,6 +5,7 @@ import { Mail, FileText, MapPin, Globe, Phone } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { cn } from "@/lib/cn";
+import { Button } from "@/components/ui";
 
 import "./footer.css";
 
@@ -34,7 +35,22 @@ export const Footer = forwardRef<HTMLElement, FooterProps>(
                 Designing products that balance user needs, business goals and technical feasibility.
               </p>
 
-              <div className="footer__location">
+              {/* Secure Vault Premium CTA Block */}
+              <div className="footer__vault-cta mt-2 p-5 border border-zinc-200/60 rounded-[20px] bg-[#FCFCFA] text-left max-w-[320px]">
+                <h4 className="text-xs font-bold uppercase tracking-wider text-[var(--foreground)] mb-1">
+                  Secure Vault
+                </h4>
+                <p className="text-[11px] text-[var(--foreground-subtle)] font-medium leading-relaxed mb-4">
+                  Private access to professional documents and career records.
+                </p>
+                <Link href="/secure-vault/login">
+                  <Button variant="primary" className="!min-h-[40px] h-10 py-2.5 px-4 text-xs font-bold rounded-full">
+                    Open Secure Vault
+                  </Button>
+                </Link>
+              </div>
+
+              <div className="footer__location mt-2">
                 <MapPin size={12} className="footer__location-icon" />
                 <span>Based in India • Open to Remote & Hybrid Opportunities</span>
               </div>
@@ -79,9 +95,6 @@ export const Footer = forwardRef<HTMLElement, FooterProps>(
             <span className="footer__copy">
               © 2026 Sujit Kumar. All rights reserved.
             </span>
-            <div className="footer__note">
-              Designed with curiosity. Built with Next.js. Focused on meaningful user experiences.
-            </div>
           </div>
         </Container>
       </Section>

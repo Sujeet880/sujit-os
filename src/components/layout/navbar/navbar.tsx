@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { forwardRef, useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 import { Button } from "@/components/ui";
 import { cn } from "@/lib/cn";
@@ -18,6 +19,7 @@ import type { NavbarProps } from "./navbar.types";
 export const Navbar = forwardRef<HTMLElement, NavbarProps>(
   ({ className, ...props }, ref) => {
     const activeSection = useActiveSection();
+    const pathname = usePathname();
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
@@ -56,25 +58,31 @@ export const Navbar = forwardRef<HTMLElement, NavbarProps>(
             <NavbarItem
               href="/#work"
               label="Work"
-              active={activeSection === "work"}
+              active={activeSection === "work" && pathname === "/"}
+            />
+
+            <NavbarItem
+              href="/design-vault"
+              label="Design Vault"
+              active={pathname === "/design-vault"}
             />
 
             <NavbarItem
               href="/#about"
               label="About"
-              active={activeSection === "about"}
+              active={activeSection === "about" && pathname === "/"}
             />
 
             <NavbarItem
               href="/#articles"
               label="Writing"
-              active={activeSection === "articles"}
+              active={activeSection === "articles" && pathname === "/"}
             />
 
             <NavbarItem
               href="/#contact"
               label="Contact"
-              active={activeSection === "contact"}
+              active={activeSection === "contact" && pathname === "/"}
             />
           </nav>
  

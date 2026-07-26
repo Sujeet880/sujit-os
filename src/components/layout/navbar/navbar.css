@@ -150,27 +150,27 @@
   align-items: center;
   justify-content: center;
   gap: 10px; /* 10px Gap mandatory */
-  background: var(--foreground) !important;
-  color: var(--background) !important;
-  border: 1px solid var(--foreground) !important;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06); /* Soft floating shadow */
+  background: var(--primary) !important;
+  color: #ffffff !important;
+  border: 1px solid var(--primary) !important;
+  box-shadow: 0 4px 14px rgba(252, 128, 25, 0.08); /* Soft floating shadow */
 }
 
 .navbar__cta:hover:not(:disabled) {
-  background: var(--primary) !important;
-  border-color: var(--primary) !important;
+  background: var(--primary-hover) !important;
+  border-color: var(--primary-hover) !important;
   color: #ffffff !important;
   transform: translateY(-2px); /* translateY(-2px) */
-  box-shadow: 0 6px 20px rgba(252, 128, 25, 0.12); /* Glow increases slightly on hover */
+  box-shadow: 0 6px 20px rgba(252, 128, 25, 0.16); /* Glow increases slightly on hover */
 }
 
 .navbar__cta-dot {
   width: 8px;
   height: 8px;
-  border: 1.5px solid var(--background); /* white border in light mode, dark in dark mode */
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
   border-radius: 50%;
-  background: var(--primary);
-  box-shadow: 0 0 8px rgba(252, 128, 25, 0.6); /* initial soft glow */
+  background: #ffffff;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6); /* initial soft glow */
   animation: navbarDotBlink 1.2s ease-in-out infinite; /* Blinking animation */
   flex-shrink: 0;
   transition: border-color 0.3s ease;

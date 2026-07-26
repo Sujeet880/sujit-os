@@ -1,6 +1,7 @@
 import { forwardRef } from "react";
 
 import { cn } from "@/lib/cn";
+import { Spinner } from "../spinner";
 
 import "./button.css";
 
@@ -40,7 +41,11 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         )}
         {...props}
       >
-        {leftIcon && (
+        {loading && (
+          <Spinner size="sm" className="button__spinner" />
+        )}
+
+        {!loading && leftIcon && (
           <span className="button__icon">
             {leftIcon}
           </span>
@@ -52,7 +57,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           </span>
         )}
 
-        {rightIcon && (
+        {!loading && rightIcon && (
           <span className="button__icon">
             {rightIcon}
           </span>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import { useActiveSection } from "@/hooks/use-active-section";
 
@@ -9,6 +10,7 @@ export function MobileMenu() {
   const [open, setOpen] = useState(false);
 
   const activeSection = useActiveSection();
+  const pathname = usePathname();
 
   const handleClose = () => {
     setOpen(false);
@@ -30,7 +32,7 @@ export function MobileMenu() {
           <Link
             href="/#work"
             className={
-              activeSection === "work"
+              activeSection === "work" && pathname === "/"
                 ? "navbar__link navbar__link--active"
                 : "navbar__link"
             }
@@ -40,9 +42,21 @@ export function MobileMenu() {
           </Link>
 
           <Link
+            href="/design-vault"
+            className={
+              pathname === "/design-vault"
+                ? "navbar__link navbar__link--active"
+                : "navbar__link"
+            }
+            onClick={handleClose}
+          >
+            Design Vault
+          </Link>
+
+          <Link
             href="/#about"
             className={
-              activeSection === "about"
+              activeSection === "about" && pathname === "/"
                 ? "navbar__link navbar__link--active"
                 : "navbar__link"
             }
@@ -54,7 +68,7 @@ export function MobileMenu() {
           <Link
             href="/#articles"
             className={
-              activeSection === "articles"
+              activeSection === "articles" && pathname === "/"
                 ? "navbar__link navbar__link--active"
                 : "navbar__link"
             }
@@ -66,7 +80,7 @@ export function MobileMenu() {
           <Link
             href="/#contact"
             className={
-              activeSection === "contact"
+              activeSection === "contact" && pathname === "/"
                 ? "navbar__link navbar__link--active"
                 : "navbar__link"
             }
