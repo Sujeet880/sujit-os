@@ -47,7 +47,7 @@ export const Hero = forwardRef<HTMLElement, HeroProps>(
 
               <div className="hero__actions">
                 <Link
-                  href="/resume/Sujit_Kumar_Resume.pdf"
+                  href="/resume/Sujit_Kumar_Resume.pdf?v=2"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

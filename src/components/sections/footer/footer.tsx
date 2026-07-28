@@ -65,7 +65,7 @@ export const Footer = forwardRef<HTMLElement, FooterProps>(
                   <a href="/#about" className="footer__link">About</a>
                   <a href="/#articles" className="footer__link">Articles</a>
                   <a href="/#contact" className="footer__link">Contact</a>
-                  <a href="/resume/Sujit_Kumar_Resume.pdf" target="_blank" rel="noopener noreferrer" className="footer__link">Resume</a>
+                  <a href="/resume/Sujit_Kumar_Resume.pdf?v=2" target="_blank" rel="noopener noreferrer" className="footer__link">Resume</a>
                 </nav>
               </div>
 
@@ -83,7 +83,7 @@ export const Footer = forwardRef<HTMLElement, FooterProps>(
                   <a href="tel:+919288498199" className="footer__link">
                     <Phone size={12} className="inline-icon" /> +91 92884 98199
                   </a>
-                  <a href="/resume/Sujit_Kumar_Resume.pdf" target="_blank" rel="noopener noreferrer" className="footer__link">
+                  <a href="/resume/Sujit_Kumar_Resume.pdf?v=2" target="_blank" rel="noopener noreferrer" className="footer__link">
                     <FileText size={12} className="inline-icon" /> Resume
                   </a>
                 </nav>

@@ -43,7 +43,7 @@ export const ContactCTA = forwardRef<
 
             <div className="contact-cta__actions">
               <Link
-                href="/resume/Sujit_Kumar_Resume.pdf"
+                href="/resume/Sujit_Kumar_Resume.pdf?v=2"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -88,7 +88,7 @@ export const ContactCTA = forwardRef<
                   <span>Medium</span>
                 </Link>
                 <div className="contact-cta__divider" />
-                <Link href="/resume/Sujit_Kumar_Resume.pdf" target="_blank" rel="noopener noreferrer" className="contact-cta__link">
+                <Link href="/resume/Sujit_Kumar_Resume.pdf?v=2" target="_blank" rel="noopener noreferrer" className="contact-cta__link">
                   <FileText size={14} className="contact-cta__link-icon" />
                   <span>Resume</span>
                 </Link>

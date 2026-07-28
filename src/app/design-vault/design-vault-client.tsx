@@ -294,7 +294,7 @@ export function BottomCTA() {
           </Button>
         </a>
         <a 
-          href="/resume.pdf" 
+          href="/resume/Sujit_Kumar_Resume.pdf?v=2" 
           target="_blank"
           className="w-full sm:w-auto"
         >
