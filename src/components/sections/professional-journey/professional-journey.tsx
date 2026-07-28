@@ -18,6 +18,7 @@ interface ExperienceItem {
   role: string;
   duration: string;
   description?: string;
+  projectsTitle?: string;
   projects?: { name: string; subtitle?: string; description?: string; bullets?: string[] }[];
   keyResponsibilities?: string[];
   businessImpact?: string;
@@ -26,34 +27,44 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
-    company: "Key Client Engagements",
-    logoText: "KC",
-    role: "Senior Product Designer (Freelance)",
+    company: "Pixel Decode",
+    logoText: "PD",
+    role: "Senior Product Designer",
     duration: "Jan 2026 – Present",
-    description: "As a freelance designer, I led end-to-end product design and product strategy across multiple enterprise client engagements. This included designing the embedded IoT control panel for Mirari Surface and architecting the enterprise SaaS workflow engine for CA Operating System, driving cross-functional collaboration between product and engineering teams to translate complex requirements into intuitive experiences.",
+    description: "Leading end-to-end product design for confidential B2B SaaS, Enterprise, AI, and IoT products. Working closely with founders, product managers, engineers, and business stakeholders to drive product discovery, UX strategy, interaction design, scalable design systems, and developer handoff while transforming complex business requirements into intuitive digital experiences.",
+    projectsTitle: "Featured Product Engagements",
     projects: [
       {
         name: "Mirari Surface",
         subtitle: "Smart Home IoT Platform",
         bullets: [
-          "Led end-to-end design of a smart-home IoT ecosystem spanning an embedded touch-panel interface and companion mobile app; chose a shared interaction language across both surfaces so users would not need to relearn controls when switching between panel and app.",
-          "Designed onboarding and device-management flows within ESP32-S3 hardware constraints, prioritizing a small set of high-frequency actions over exhaustive configuration screens to keep the interface usable on limited hardware.",
-          "Designed scene-creation flows enabling users to group and automate multiple devices, balancing flexibility for advanced users against simplicity for first-time setup.",
-          "Partnered directly with hardware and firmware teams from early discovery so technical constraints surfaced before high-fidelity design work began — contributing to a 75% faster go-live timeline versus the team's prior integration cycle."
+          "Led the end-to-end UX and product design of a smart home IoT ecosystem consisting of an embedded touch panel and companion mobile application.",
+          "Designed intuitive onboarding, device management, automation, and scene creation experiences while balancing hardware limitations with usability.",
+          "Established a consistent interaction model across embedded and mobile platforms to reduce the learning curve and improve user adoption.",
+          "Collaborated closely with hardware, firmware, and engineering teams throughout discovery, prototyping, testing, and implementation."
         ]
       },
       {
         name: "CA Operating System",
-        subtitle: "SaaS Platform for Chartered Accountant Firms",
+        subtitle: "Enterprise SaaS Platform",
         bullets: [
-          "Led product strategy and UX for a SaaS platform reimagining fragmented Chartered Accountant firm operations into one connected ecosystem, replacing 6–7 disconnected tools (spreadsheets, WhatsApp, personal calendars, manual reminders) with a single connected system.",
-          "Conducted end-to-end operational research across lead management, client onboarding, document collection, compliance, and payments; identified that operational fragmentation — not accounting complexity — was the root usability problem, reframing the product from a dashboard into a full operating system.",
-          "Defined product architecture and information model before visual design, mapping relationships across leads, clients, documents, payments, and compliance around a single client profile ('Client Timeline') and restructuring navigation around user tasks to reduce cross-module context switching.",
-          "Architected for scale from day one — role-based permissions, multi-tenant structure, and organization-level settings — and designed automation workflows (recurring compliance reminders, payment follow-ups, auto-generated document requests) to remove repetitive manual coordination across the client lifecycle."
+          "Led product discovery, UX strategy, and end-to-end product design for an enterprise platform built for Chartered Accountant firms.",
+          "Transformed fragmented business workflows into a connected operating system covering client management, compliance, document workflows, billing, and internal operations.",
+          "Defined scalable information architecture, user journeys, navigation systems, and design patterns before high-fidelity execution.",
+          "Worked alongside founders, product managers, engineers, and business stakeholders to deliver scalable enterprise experiences aligned with business objectives."
         ]
       }
     ],
-    skills: ["Enterprise IoT", "Embedded UX", "Product Strategy", "Cross-functional Collaboration", "Enterprise SaaS"]
+    skills: [
+      "Embedded UX",
+      "IoT",
+      "Interaction Design",
+      "Cross-functional Collaboration",
+      "Enterprise SaaS",
+      "Product Strategy",
+      "Information Architecture",
+      "Design Systems"
+    ]
   },
   {
     company: "Cooter:Labs",
@@ -188,7 +199,7 @@ export const ProfessionalJourney = forwardRef<
                 {/* Key Engagements (Projects) */}
                 {exp.projects && (
                   <div className="professional-journey__projects">
-                    <h4 className="professional-journey__subtitle">Key Engagements</h4>
+                    <h4 className="professional-journey__subtitle">{exp.projectsTitle || "Key Engagements"}</h4>
                     <div className="professional-journey__projects-list">
                       {exp.projects.map((proj, pIdx) => (
                         <div key={pIdx} className="professional-journey__project-item">
