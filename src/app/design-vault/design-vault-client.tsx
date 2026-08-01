@@ -13,7 +13,7 @@ export function DesignVaultHero() {
   return (
     <div className="pt-24 pb-12 text-center md:text-left flex flex-col md:flex-row justify-between items-start md:items-center border-b border-[var(--border)] mb-12">
       <div className="max-w-2xl">
-        <span className="text-[10px] tracking-[0.2em] font-extrabold text-[var(--primary)] uppercase bg-[var(--primary-light)] px-3 py-1 rounded-full border border-orange-100 inline-block mb-4">
+        <span className="text-[10px] tracking-[0.2em] font-extrabold text-[var(--primary)] uppercase bg-[var(--primary-light)] px-3 py-1 rounded-full border border-[#FC8019]/20 inline-block mb-4">
           CURATED ARCHIVE
         </span>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-[var(--foreground)] mb-6">
@@ -66,9 +66,9 @@ export function CategoryFilter({
             <button
               key={cat}
               onClick={() => onSelectCategory(cat)}
-              className={`px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap transition-all duration-200 cursor-pointer ${
+              className={`px-4 py-2.5 rounded-full text-xs font-bold whitespace-nowrap transition-all duration-200 cursor-pointer ${
                 isActive 
-                  ? "bg-[#F97316] text-white border border-[#F97316] shadow-sm shadow-orange-500/20" 
+                  ? "bg-[#FC8019] text-white border border-[#FC8019] shadow-sm shadow-[#FC8019]/20" 
                   : "bg-[var(--surface)] text-[var(--foreground-muted)] border border-[var(--border)] hover:border-[var(--foreground-subtle)]"
               }`}
             >
@@ -129,10 +129,14 @@ export function ProjectGrid({
 // 4. ProjectCard
 export function ProjectCard({ project }: { project: VaultProject }) {
   const [isHovered, setIsHovered] = useState(false);
+  const url = project.prototypeUrl || project.figmaUrl || "#";
 
   return (
-    <div 
-      className="group/card bg-[var(--surface)] rounded-[20px] border border-[var(--border)] overflow-hidden shadow-sm hover:shadow-md transition-all duration-[250ms] ease-out flex flex-col h-full cursor-default relative w-full"
+    <a 
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group/card bg-[var(--surface)] rounded-[20px] border border-[var(--border)] overflow-hidden shadow-sm hover:shadow-lg transition-all duration-[250ms] ease-out flex flex-col h-full cursor-pointer relative w-full no-underline"
       style={{ transform: isHovered ? "translateY(-6px)" : "translateY(0)" }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -142,10 +146,11 @@ export function ProjectCard({ project }: { project: VaultProject }) {
         <img
           src={project.coverImage}
           alt={project.title}
+          loading="lazy"
           className="absolute inset-0 w-full h-full object-cover"
           style={{ 
             transition: "transform 250ms cubic-bezier(0.16, 1, 0.3, 1)",
-            transform: isHovered ? "scale(1.03)" : "scale(1.0)"
+            transform: isHovered ? "scale(1.05)" : "scale(1.0)"
           }}
         />
 
@@ -160,12 +165,9 @@ export function ProjectCard({ project }: { project: VaultProject }) {
           </div>
 
           {/* Center Overlay Text */}
-          <div className="flex gap-2 justify-center items-center flex-grow -mt-2">
+          <div className="flex justify-center items-center flex-grow -mt-2">
             <span className="text-[9px] bg-white/95 text-black font-extrabold uppercase px-2.5 py-1 rounded-md shadow-sm">
-              View Prototype
-            </span>
-            <span className="text-[9px] bg-black/60 text-white font-extrabold uppercase px-2.5 py-1 rounded-md shadow-sm border border-white/10">
-              Open Figma
+              View Design ↗
             </span>
           </div>
 
@@ -216,7 +218,7 @@ export function ProjectCard({ project }: { project: VaultProject }) {
           />
         </div>
       </div>
-    </div>
+    </a>
   );
 }
 
@@ -243,30 +245,16 @@ interface ProjectButtonsProps {
 }
 
 export function ProjectButtons({ prototypeUrl, figmaUrl }: ProjectButtonsProps) {
+  const url = prototypeUrl || figmaUrl;
+  if (!url) return null;
+
   return (
-    <div className="flex flex-row items-center gap-[16px] mt-6">
-      {prototypeUrl && (
-        <a 
-          href={prototypeUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Button variant="primary">
-            Prototype
-          </Button>
-        </a>
-      )}
-      {figmaUrl && (
-        <a 
-          href={figmaUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Button variant="outline">
-            Figma
-          </Button>
-        </a>
-      )}
+    <div className="mt-6 w-full">
+      <div 
+        className="w-full h-12 rounded-full border-2 border-[#FC8019] bg-white dark:bg-zinc-900 text-[#FC8019] font-semibold text-sm flex items-center justify-center transition-all duration-300 ease-out select-none shadow-sm hover:shadow-md hover:bg-[#FC8019] hover:text-white hover:border-transparent group-hover/card:bg-[#FC8019] group-hover/card:text-white group-hover/card:border-transparent group-hover/card:shadow-md"
+      >
+        View Design ↗
+      </div>
     </div>
   );
 }
@@ -278,7 +266,7 @@ export function BottomCTA() {
       <div className="absolute -top-12 -left-12 w-24 h-24 bg-orange-500/5 blur-3xl rounded-full" />
       <div className="absolute -bottom-12 -right-12 w-24 h-24 bg-orange-500/5 blur-3xl rounded-full" />
 
-      <span className="text-[10px] tracking-[0.2em] font-extrabold text-[var(--primary)] uppercase bg-[var(--primary-light)] px-3 py-1 rounded-full border border-orange-100 inline-block mb-6">
+      <span className="text-[10px] tracking-[0.2em] font-extrabold text-[var(--primary)] uppercase bg-[var(--primary-light)] px-3 py-1 rounded-full border border-[#FC8019]/20 inline-block mb-6">
         COLLABORATION
       </span>
       <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-[var(--foreground)] mb-6">
@@ -346,7 +334,7 @@ export function DesignVaultPage() {
   }, [activeCategory]);
 
   return (
-    <div className="min-h-screen bg-[#FAFAF8] py-12 px-6 md:px-10 lg:px-16">
+    <div className="min-h-screen bg-[var(--background)] py-12 px-6 md:px-10 lg:px-16">
       <div className="max-w-[1280px] mx-auto">
         {/* Hero Section */}
         <DesignVaultHero />
