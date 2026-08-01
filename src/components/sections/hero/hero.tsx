@@ -7,6 +7,7 @@ import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { SocialButtons } from "@/components/common";
 import { cn } from "@/lib/cn";
+import { RESUME_PATH } from "@/config/constants";
 
 import "./hero.css";
 
@@ -47,7 +48,7 @@ export const Hero = forwardRef<HTMLElement, HeroProps>(
 
               <div className="hero__actions">
                 <Link
-                  href="/resume/Sujit_Kumar_Resume.pdf?v=2"
+                  href={RESUME_PATH}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

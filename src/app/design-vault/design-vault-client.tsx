@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 import { designVaultProjects, VaultProject } from "@/data/designVault";
 import { Button } from "@/components/ui";
+import { RESUME_PATH } from "@/config/constants";
 
 // 1. DesignVaultHero
 export function DesignVaultHero() {
@@ -294,7 +295,7 @@ export function BottomCTA() {
           </Button>
         </a>
         <a 
-          href="/resume/Sujit_Kumar_Resume.pdf?v=2" 
+          href={RESUME_PATH} 
           target="_blank"
           className="w-full sm:w-auto"
         >
